@@ -1,0 +1,281 @@
+.container {
+    text-align: left;
+    margin-top: 150px;
+  }
+  
+  .black-text {
+    color: black;
+    font-size: 64px;
+    margin-left: 10%; 
+  }
+  
+  .image-container {
+    position: relative;
+  
+    .cover-image {
+      width: 100%; // Растянуть изображение на всю ширину
+      height: auto; // Соотношение сторон
+    }
+  
+    .overlay-text {
+      position: absolute;
+      top: 0; // Отступ от верхнего края
+      left: 10%; // Отступ от левого края
+      color: white;
+      font-size: 64px; // Установите размер шрифта по вашему усмотрению
+    }
+  }
+  
+  .goal {
+    margin-left: 30%; // Отступ от левого края для всего блока
+    margin-top: 150px;
+    h2 {
+      font-size: 64px; // Размер шрифта для заголовка
+      margin: 20px 0; // Отступ между строками
+    }
+  
+    p {
+      font-size: 32px; 
+      margin: 10px 0; // Отступ между строками
+    }
+  }
+
+  .new-block {
+    display: flex;
+    flex-direction: column; // Дефолтное состояние для мобильных устройств
+    align-items: center;
+    font-size: 20px;
+    margin: 100px 20%; // Отступы от краев
+  
+    .text-content {
+      margin-bottom: 20px; // Отступ между текстом и изображением
+    }
+  
+    .new-block-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    @media (min-width: 769px) {
+      flex-direction: row; // Изменение направления на десктопах
+      justify-content: space-between;
+  
+      .text-content {
+        width: 50%; // Текст занимает половину ширины
+        margin-right: 30px; // Отступ справа от текста
+      }
+  
+      .new-block-image {
+        width: 50%; // Изображение занимает половину ширины
+        object-fit: cover; // Обеспечивает сохранение пропорций
+        /* Эффект параллакса */
+        transform: translateZ(0); // Улучшаем обработку параллакса
+        will-change: transform; // Оптимизация производительности
+      }
+    }
+  }
+  .gray-block {
+    background-color: #84818153; // Бледно-серый цвет
+    padding: 20px; 
+    position: relative;
+  
+    .gray-block-title {
+      margin: 0; // Нулевые отступы
+      padding: 0;
+      font-size: 60px;
+      margin-left: 20%; // Отступ от левого края
+    }
+  
+    .gray-block-text {
+        font-size: 20px;
+      margin-left: 20%;
+      width: 70%;
+    }
+  }
+  
+  .animated-block {
+    position: relative;
+    overflow: hidden; // Скрытие текста, выходящего за пределы
+    .animated-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .moving-text {
+      position: absolute;
+      white-space: nowrap; // Предотвращаем перенос слов
+      font-size: 64px; // Размер шрифта
+      color: #f0f0f0;
+  
+      &.top-text {
+        top: 0; // Отступ сверху
+        left: 0;
+        animation: moveRight 60s linear infinite; // Анимация движения вправо
+      }
+  
+      &.bottom-text {
+        bottom: 0; // Отступ снизу
+        right: 0;
+        animation: moveLeft 60s linear infinite; // Анимация движения влево
+      }
+    }
+  }
+  
+  // Анимация для верхнего текста
+  @keyframes moveRight {
+    0% {
+      transform: translateX(-25%); // Начало за пределами слева
+    }
+    100% {
+      transform: translateX(25%); // Завершение за пределами справа
+    }
+  }
+  
+  // Анимация для нижнего текста
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(25%); // Начало за пределами справа
+    }
+    100% {
+      transform: translateX(-25%); // Завершение за пределами слева
+    }
+  }
+
+  .values-block {
+    background-color: #84818153; // Бледно-серый цвет
+    padding: 20px 0; // Отступы сверху и снизу
+    margin-top: -10px; // Убираем отступ между предыдущим блоком и этим, чтобы они соприкасались
+    
+    // отступы внутренних элементов
+    padding-left: 15%; // Отступ слева
+    padding-right: 15%; // Отступ справа
+  
+    .values-title {
+      text-align: center; // Центрируем заголовок
+      font-size: 60px; // Увеличение размера шрифта заголовка
+      margin-bottom: 20px; // Отступ снизу
+    }
+  
+    .values-columns {
+      display: flex;
+      justify-content: space-between; // Распределяем колонки по ширине
+      padding: 0; // Убираем отступы по бокам
+  
+      .value-column {
+        width: 30%; // Ширина каждой колонки
+        text-align: left; // Выравнивание текста в левую сторону
+  
+        h3 {
+          margin-bottom: 10px; // Отступ между заголовком и текстом
+          font-size: 20px; // Размер шрифта заголовка
+        }
+  
+        p {
+          margin: 0; // Убираем отступы для текста
+          font-size: 16px; // Размер шрифта для текста
+        }
+      }
+    }
+  }
+
+  .media-container {
+    display: flex;
+    flex-direction: row; /* Вертикальное расположение для заголовка и квадрата */
+    align-items: center; /* Центрируем по горизонтали */
+    margin-left: 30%; /* Вертикальные отступы от общего контейнера */
+    width: 70%; /* Устанавливаем ширину с отступами от краев экрана */
+  
+    p {
+      margin-top: 0; /* Убираем отступы у заголовка */
+      font-size: clamp(2rem, 5vw, 4rem); /* Увеличенный размер шрифта */
+      text-align: center; /* Центрируем текст по горизонтали */
+    }
+  
+    .square-block {
+      margin-top: 80px; /* Значительный отступ между заголовком и квадратом */
+      width: 100%; /* Задаем ширину квадрату */
+      display: flex;
+      justify-content: center; /* Центрируем квадрат */
+    }
+  }
+
+  .places-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить элементы на следующую строку */
+    justify-content: space-between; /* Равномерное распределение между элементами */
+    width: 90%; /* Устанавливаем ширину контейнера */
+    margin: auto; /* Центрируем контейнер */
+    
+    img {
+      width: 33%; /* На больших экранах изображения занимают 30% ширины контейнера */
+      height: auto; /* Поддержка пропорций изображения */
+      margin-bottom: 20px; /* Небольшой отступ снизу для каждого изображения */
+    }
+    
+    @media (max-width: 1000px) {
+      img {
+        width: 100%; /* На меньших экранах изображения занимают 80% ширины */
+        margin: 5px auto; /* Центрируем изображения */
+      }
+    }
+  }
+
+  .bottom-spacer {
+    height: 100px;
+  }
+
+  .event-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+  
+  .event-container {
+    width: 80%;
+    margin: 0px auto;
+  }
+  
+  .event {
+    border-top: 1px solid black; /* Черта сверху */
+    padding: 1px 0;
+    display: flex;
+    justify-content: flex-start; /* Изменено на flex-start для прижатия к левому краю */
+    align-items: flex-start; /* Прижимаем к верхней части контейнера */
+  }
+  
+  .event-details {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  .footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 200px;
+  }
+  .cards-container {
+    display: flex; // Используем flexbox для размещения карточек
+    flex-wrap: wrap; // Обертывание карточек
+    justify-content: center; // Центрирование карточек
+    padding: 0 5%; // Отступы от краев экрана
+    width: 90%; // Ширина контейнера
+    margin: 20px auto; // Центрируем контейнер
+  
+    app-member-card {
+      flex: 1 0 21%; // Указывается ширина карточек (4 в ряд)
+      max-width: 400px; // Ограничиваем ширину карточек
+    }
+  }
+  
+  // Медиазапросы для адаптивного дизайна
+  @media (max-width: 1000px) {
+    .cards-container app-member-card {
+      flex: 1 0 45%; // 2 в ряд
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cards-container app-member-card {
+      flex: 1 0 100%; // 1 в ряд
+    }
+  }

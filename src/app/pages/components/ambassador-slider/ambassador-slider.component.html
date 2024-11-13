@@ -1,0 +1,36 @@
+<div class="ambassador-slider">
+  <div class="slider-container">
+    <div
+      class="slider-track"
+      [style.transform]="
+        'translateX(-' +
+        (currentIndex * (100 / displayedImages) +
+          (currentIndex * 10) / (100 / displayedImages)) +
+        '%)'
+      "
+    >
+      <div class="slide" *ngFor="let image of images; let i = index">
+        <img [src]="image" alt="Ambassador {{ i + 1 }}" />
+        <div class="description">
+          <h3>Name {{ i + 1 }}</h3>
+          <h4>Surname {{ i + 1 }}</h4>
+          <p>в клубе с 2020 года</p>
+          <p>амбассадор с 2023 года</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-arrows">
+      <span class="prev" (click)="prevImage()">&lt;</span>
+      <span class="next" (click)="nextImage()">&gt;</span>
+    </div>
+
+    <div class="nav-dots">
+      <span
+        *ngFor="let idx of [].constructor(totalDots); let index = index"
+        (click)="goToImage(index)"
+        [class.active]="index === currentIndex"
+      ></span>
+    </div>
+  </div>
+</div>

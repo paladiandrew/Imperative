@@ -1,0 +1,40 @@
+<div class="header">
+  <h1>(амбассадоры)</h1>
+</div>
+
+<div class="cover">
+  <img src="assets/images/cover.jpg" alt="Cover" />
+</div>
+
+<div class="text-fields">
+  <div class="text-field1">
+    <p>
+      Официальные лица Orator.Club из числа учащихся. Ежегодно представляют
+      сообщество.
+    </p>
+  </div>
+  <div class="text-field2">
+    <p>
+      Официальные лица Orator Club из числа выпускников программ и участников
+      закрытого сообщества members. Никто лучше самих участников Клуба не
+      расскажет вам о том, что такое Orator Club и как он может поменять жизнь
+      тех, кто приходит сюда учиться.
+    </p>
+  </div>
+</div>
+
+<div class="ambassador-list">
+  <app-ambassador-card
+    *ngFor="let ambassador of ambassadors"
+    [name]="ambassador.name"
+    [ambassadorYear]="ambassador.ambassadorYear"
+    [memberYear]="ambassador.memberYear"
+    [photo]="ambassador.photo"
+  >
+  </app-ambassador-card>
+</div>
+
+<p class="footer-text">
+  © 2011-2024 THE ORATOR CLUB | ООО «КЛУБ ОРАТОРОВ», ИНН 7725843515 / KLUB
+  ORATOROV, OOO TIN 7725843515
+</p>

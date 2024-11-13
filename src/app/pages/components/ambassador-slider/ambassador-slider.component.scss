@@ -1,0 +1,90 @@
+.ambassador-slider {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+  
+    .slider-container {
+      overflow: hidden;
+      position: relative; 
+  
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease;
+  
+        .slide {
+          margin: 0 5px; // Убираем отступ справа, добавляем по 5px слева и справа
+          flex: 0 0 calc((100% / 4) - 20px); 
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+  
+          img {
+            width: 100%;
+            height: auto;
+          }
+  
+          .description {
+            text-align: left;
+  
+            h3,
+            h4 {
+              margin: 0;
+            }
+          }
+        }
+  
+        .slide:first-child {
+          margin-left: 5px; // Устанавливаем отступ 5px для первого слайда
+        }
+  
+        .slide:last-child {
+          margin-right: 5px; // Убираем последний отступ справа
+        }
+  
+        &.hidden {
+          display: none;
+        }
+      }
+  
+      .nav-arrows {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+  
+        .prev,
+        .next {
+          cursor: pointer;
+          font-size: 2rem;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          padding: 10px;
+        }
+      }
+  
+      .nav-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        
+        span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          background-color: gray;
+          border-radius: 50%;
+          cursor: pointer;
+  
+          // Убедитесь, что нет тени
+          box-shadow: none; // Убираем тень, если была
+        
+          &.active {
+            background-color: black;
+          }
+        }
+      }
+    }
+  }

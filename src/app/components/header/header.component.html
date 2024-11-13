@@ -1,0 +1,55 @@
+<div class="header" [ngClass]="{ home: isHomePage }">
+  <!-- Логотип -->
+  <a routerLink="/" class="logo">
+    <img src="assets/images/logo.png" />
+  </a>
+
+  <!-- Навигация для ПК -->
+  <nav class="nav pc-nav" *ngIf="!isMobile">
+    <div class="nav-columns">
+      <div class="nav-column">
+        <a routerLink="/club-meetings">(ВСТРЕЧИ КЛУБА)</a>
+        <a routerLink="/about">(О КЛУБЕ)</a>
+      </div>
+      <div class="nav-column">
+        <a routerLink="/community">(СООБЩЕСТВО)</a>
+        <a routerLink="/ambassadors">(АМБАССАДОРЫ)</a>
+      </div>
+      <div class="nav-column">
+        <a routerLink="/trips">(ВЫЕЗДЫ)</a>
+        <a routerLink="/books">(КНИГИ)</a>
+      </div>
+      <div class="nav-column">
+        <a routerLink="/hall-of-fame">(ЗАЛ СЛАВЫ)</a>
+        <a routerLink="/contacts">(КОНТАКТЫ)</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Иконка мобильного меню -->
+  <div class="mobile-menu-icon" (click)="toggleMobileMenu()" *ngIf="isMobile">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen" *ngIf="isMobile">
+    <div class="mobile-menu-header">
+      <div (click)="toggleMobileMenu()" class="close-icon"></div>
+    </div>
+    <nav class="mobile-nav">
+      <a routerLink="/club-meetings" (click)="toggleMobileMenu()"
+        >ВСТРЕЧИ КЛУБА</a
+      >
+      <a routerLink="/trainings" (click)="toggleMobileMenu()">ТРЕНИНГИ</a>
+      <a routerLink="/community" (click)="toggleMobileMenu()">СООБЩЕСТВО</a>
+      <a routerLink="/about" (click)="toggleMobileMenu()">О КЛУБЕ</a>
+      <a routerLink="/ambassadors" (click)="toggleMobileMenu()">АМБАССАДОРЫ</a>
+      <a routerLink="/trips" (click)="toggleMobileMenu()">ВЫЕЗДЫ</a>
+      <a routerLink="/books" (click)="toggleMobileMenu()">КНИГИ</a>
+      <a routerLink="/hall-of-fame" (click)="toggleMobileMenu()">ЗАЛ СЛАВЫ</a>
+      <a routerLink="/contacts" (click)="toggleMobileMenu()">КОНТАКТЫ</a>
+    </nav>
+  </div>
+</div>

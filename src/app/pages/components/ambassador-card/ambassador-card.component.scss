@@ -1,0 +1,37 @@
+.card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 5px; /* Отступы между карточками */
+      margin-right: 5px;
+      /* Ширина карточек по умолчанию - 25% для 4 карточек в строке */
+      width: calc(25% - 50px); /* 4 карточки в строке на больших экранах */
+  
+      img {
+        max-width: 400px;
+        height: auto; /* Обеспечиваем пропорции изображений */
+      }
+  
+      .text {
+        margin-top: 10px;
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .card {
+        width: calc(33.33% - 40px); /* 3 карточки в строке на средних экранах */
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .card {
+        width: calc(50% - 30px); /* 2 карточки в строке на малых экранах */
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .card {
+        width: calc(100% - 20px); /* 1 карточка в строке на очень малых экранах */
+      }
+    }
+  

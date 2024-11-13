@@ -1,0 +1,214 @@
+.full-screen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    padding-top: 30%; /* Отступ сверху */
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Увеличенное расстояние между строками */
+  }
+  
+  .line {
+    opacity: 0; /* Начальная непрозрачность для анимации */
+    transition: opacity 1s ease; /* Плавный переход для эффекта появления */
+  
+    &.line1 {
+      position: absolute; /* Устанавливаем для управления положением */
+      top: 20%;
+      left: 5%;
+      font-size: clamp(2rem, 4vw, 6rem);
+      animation: fadeInUp 1s 0.5s ease forwards;
+    }
+  
+    &.line2 {
+      position: absolute; /* Устанавливаем для управления положением */
+      top: 30%; /* Можно изменить для настройки */
+      right: 5%; /* Правый край */
+      font-size: clamp(2rem, 4vw, 6rem);
+      animation: fadeInUp 1s 1.5s ease forwards; /* С задержкой */
+    }
+  
+    &.line3 {
+      position: absolute; /* Устанавливаем для управления положением */
+      top: 50%;
+      left: 5%;
+      font-size: clamp(2rem, 4vw, 6rem);
+      animation: fadeInUp 1s 2.5s ease forwards; /* С задержкой */
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Начальное смещение вниз */
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Конечное состояние */
+    }
+  }
+  
+  .title-container {
+    margin-top: 100px; /* Отступ между текстами и заголовком */
+    text-align: center; /* Центрируем заголовок */
+  }
+  .club-title {
+    font-size: clamp(2rem, 4vw, 6rem); /* Адаптивный размер шрифта */
+    animation: fadeIn 1s ease forwards; /* Анимация появления заголовка */
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column; /* По умолчанию блоки будут один под другим */
+    width: 60%; /* Ширина контейнера */
+    margin: 0 auto; /* Центрируем контейнер */
+    padding: 0 20%; /* Отступы от краев по 20% */
+  
+    @media (min-width: 1100px) {
+      flex-direction: row; /* Изменяем на горизонтальное размещение для больших экранов */
+      justify-content: space-between; /* Распределяем пространство между блоками */
+    }
+  }
+  
+  .text-block {
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон для текстовых блоков */
+    color: black;
+    padding: 20px; /* Отступ внутри блоков */
+    margin: 10px 0; /* Отступ между блоками */
+    border-radius: 8px; /* Закругленные углы */
+  
+    &.block1 {
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* Адаптивный размер шрифта для первого блока */
+    }
+  
+    &.block2 {
+      font-size: clamp(1rem, 2vw, 1.5rem); /* Адаптивный размер шрифта для второго блока */
+    }
+  }
+  
+  .advice-container {
+    width: 60%; /* Ширина контейнера */
+    padding: 0 20%; /* Отступы от краев по 20% */
+    color: black; /* Цвет текста */
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Адаптивный размер шрифта, как для блока 2 в инфоблоке */
+    text-align: justify; /* Выравнивание текста по ширине */
+  }
+  
+  //------------------------------------------------------------------------
+  .team-container {
+    display: flex;
+    flex-direction: column; /* По умолчанию: вертикально для узких экранов */
+    align-items: center; /* Центрируем элементы */
+    width: 60%; /* Ширина контейнера */
+    margin: 150px auto; /* Отступы сверху и снизу */
+    padding: 0 20%; /* Отступы от краев по 20% */
+    
+    @media (min-width: 900px) {
+      flex-direction: row; /* Горизонтальное размещение для широких экранов */
+      justify-content: space-between; /* Распределяем пространство между текстом и изображением */
+    }
+  }
+  
+  .team-column {
+    display: flex;
+    flex-direction: column; /* Вертикальное размещение текстовых блоков */
+  }
+  
+  .team-block {
+    color: black; /* Цвет текста */
+    padding: 15px; /* Отступ внутри блоков */
+    margin-bottom: 10px; /* Отступ между блоками */
+  }
+  
+  .block3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem); /* Адаптивный размер шрифта для первого текста */
+  }
+  
+  .block4 {
+    font-size: clamp(1rem, 2vw, 1.5rem); /* Адаптивный размер шрифта для второго текста */
+  }
+  
+  .team-image {
+    width: 100%; /* Изображение будет занимать большую часть контейнера */
+    object-fit: cover; /* Обеспечивает обрезку, чтобы сохранить соотношение сторон */
+    margin-top: 20px; /* Отступ сверху, чтобы разъединить текст и изображение на узких экранах */
+    
+    @media (min-width: 900px) {
+        margin-top: 500px; /* Убираем отступ сверху для широких экранов */
+        transition: transform 0.3s; /* Плавный переход для анимации */
+        width: 55%;
+    }
+  }
+
+  .image-container {
+    margin-top: 100px; /* Отступ сверху */
+    padding: 0 20%; /* Отступы от краев экрана по 20% */
+    
+    .cover-image {
+      width: 100%; /* Ширина изображения 100% от контейнера */
+      height: auto; /* Автоматическая высота для сохранения пропорций */
+      display: block; /* Для предотвращения нежелательных отступов под изображением */
+    }
+  }
+
+  .bio-container {
+    display: flex; /* Используем flexbox для расположения блоков */
+    align-items: center; /* Центрируем по вертикали */
+    justify-content: center; /* Центрируем по горизонтали */
+    background-color: lightgray; /* Светло-серый фон */
+    width: 100%; /* Занимает 100% ширины экрана */
+    padding: 50px; /* Отступы вокруг контейнера */
+    box-sizing: border-box; /* Учитываем padding в ширине контейнера */
+    margin-top: 150px; /* Отступ от предыдущего компонента */
+  
+    @media (max-width: 900px) {
+      flex-direction: column; /* Вертикальное расположение для узких экранов */
+      align-items: center; /* Центрируем элементы по горизонтали */
+    }
+  }
+  
+  .bio-image {
+    width: 23.3%; /* Ширина изображения на широких экранах */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    object-fit: cover; /* Обеспечивает обрезку, чтобы сохранить соотношение сторон */
+    
+    @media (max-width: 900px) {
+      width: 69%; /* Ширина изображения на узких экранах */
+    }
+  }
+  
+  .bio-text {
+    width: 50%; /* Ширина текстового блока на широких экранах */
+    background-color: white; /* Белый фон для блока с текстом */
+    padding: 20px; /* Добавляем отступы внутри блока для текста */
+  
+    h2 {
+      font-size: clamp(1.5rem, 2vw, 2rem); /* Адаптивный размер шрифта для заголовка */
+      margin: 0 0 10px 0; /* Задаем отступы для заголовка */
+    }
+  
+    p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem); /* Адаптивный размер шрифта для текста */
+    }
+  
+    @media (max-width: 900px) {
+      width: 60%; /* Ширина текстового блока на узких экранах */
+    }
+  }
+.footer {
+  text-align: center; /* Центрируем текст */
+  margin-top: 200px; /* Отступ сверху */
+  font-size: clamp(0.8rem, 1vw, 1rem); /* Адаптивный размер шрифта */
+  color: #555; /* Цвет текста, можно изменить по желанию */
+}

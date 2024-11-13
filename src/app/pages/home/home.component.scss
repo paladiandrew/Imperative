@@ -1,0 +1,647 @@
+.home {
+    width: 100%;
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .cover-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .cover {
+    width: 100%;
+    height: 100%;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    video {
+        position: absolute; /* Абсолютное позиционирование для правильного размещения */
+        top: 50%; /* Центрируем по вертикали */
+        left: 50%; /* Центрируем по горизонтали */
+        width: auto; /* Автоматическая ширина */
+        height: 100%; /* Высота контейнера */
+        transform: translate(-50%, -50%); /* Сдвигаем на 50% по обеим осям для центрирования */
+        object-fit: cover; /* Сохраняет соотношение сторон, заполняя контейнер */
+        object-position: center; /* Центрируем видео */
+      }
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .text-line {
+    position: absolute;
+    color: #000;
+    font-size: clamp(2rem, 4vw, 6rem);
+    font-weight: bold;
+    opacity: 0;
+    animation-fill-mode: forwards;
+  
+    &.line1 {
+      top: 30%;
+      left: 5%;
+      font-size: clamp(2rem, 4vw, 6rem);
+      animation: fadeInUp 1s 0.5s ease forwards;
+    }
+  
+    &.line4 {
+      top: 45%;
+      left: 5%;
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      line-height: 1.5;
+      animation: fadeInUp 1s 4s ease forwards;
+    }
+  
+    &.line2 {
+      bottom: 20%;
+      right: 5%;
+      animation: fadeInUp 1s 1.5s ease forwards;
+    }
+  
+    &.line3 {
+      bottom: 10%;
+      left: 5%;
+      animation: fadeInUp 1s 2s ease forwards;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Информация о клубе */
+  .info-container {
+    width: 90%;
+    margin: 50px auto 20px;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  
+  .info-block {
+    margin-bottom: 15px;
+  
+    p {
+      line-height: 1.5;
+      color: #333;
+    }
+  }
+  
+  .first-text-block p {
+    font-size: clamp(2rem, 3vw, 3.5rem);
+  }
+  
+  .second-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .second-text-block {
+    width: 60%;
+    margin-right: 5%;
+  
+    p {
+      font-size: clamp(1.75rem, 2.5vw, 2.5rem);
+    }
+  }
+  
+  .square-block {
+    width: 38%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Мобильные устройства (меньше 768px) */
+  @media (max-width: 767px) {
+    .info-container {
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .first-text-block p {
+      font-size: clamp(1.2rem, 4vw, 1.5rem);
+    }
+  
+    .second-row {
+      flex-direction: column;
+    }
+  
+    .second-text-block {
+      width: 100%;
+      margin-right: 0;
+    }
+  
+    .second-text-block p {
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+    }
+  
+    .square-block {
+      width: 100%;
+      margin-top: 10px;
+      justify-content: center;
+    }
+  }
+  
+  /* Планшеты (768px - 1199px) */
+  @media (min-width: 768px) and (max-width: 1300px) {
+    .info-container {
+      width: 90%;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  
+    .first-text-block {
+      margin-bottom: 20px;
+    }
+  
+    .first-text-block p {
+      font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    }
+  
+    .second-row {
+      flex-direction: row;
+    }
+  
+    .second-text-block {
+      width: 65%;
+      margin-right: 2%;
+    }
+  
+    .second-text-block p {
+      font-size: clamp(1rem, 2vw, 1.4rem);
+    }
+  
+    .square-block {
+      width: 33%;
+    }
+  }
+  
+  /* Большие экраны (1200px и больше) */
+  @media (min-width: 1301px) {
+    .info-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 90%; /* Ширина уже задана выше */
+      margin: 100px auto 20px;
+      padding-left: 5%; /* Соответствует изменениям выше */
+      padding-right: 5%;
+    }
+  
+    .first-text-block,
+    .second-text-block,
+    .square-block {
+      width: 30%;
+    }
+  
+    .first-text-block p {
+      font-size: clamp(2rem, 2vw, 3rem);
+    }
+  
+    .second-row {
+      width: 65%;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  
+    .second-text-block {
+      width: 60%;
+      margin-right: 1%;
+    }
+  
+    .second-text-block p {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+  
+    .square-block {
+      width: 39%;
+    }
+  }
+  .bottom-spacer {
+    height: 100px;
+  }
+  .learning-community {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    width: 90%;
+  
+    .image-container,
+    .text-container {
+      width: 90%;
+    }
+  
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+  
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  
+    .text-container {
+      text-align: center;
+  
+      .heading {
+        font-size: clamp(2rem, 5vw, 4rem);
+        margin-bottom: 20px;
+      }
+  
+      .programs {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+  
+      .description {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+    }
+  
+    /* Стили для экранов шире 1100px */
+    @media (min-width: 1100px) {
+      flex-wrap: nowrap;
+      align-items: center;
+  
+      .image-container,
+      .text-container {
+        width: 45%;
+      }
+  
+      .image-container {
+        margin-bottom: 0;
+      }
+  
+      .text-container {
+        text-align: left;
+        margin-left: 5%;
+  
+        .heading {
+          font-size: clamp(2rem, 3.5vw, 4.5rem);
+        }
+  
+        .programs {
+          font-size: clamp(1.25rem, 2.5vw, 2.5rem);
+        }
+  
+        .description {
+          font-size: clamp(1rem, 1.7vw, 1.5rem);
+        }
+      }
+    }
+  }
+  .gift-certificate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto;
+    width: 90%;
+    padding: 20px 0;
+  
+    @media (min-width: 900px) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      margin: 50px auto;
+      padding: 20px 0;
+    }
+  
+    .gift-text {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+  
+      @media (min-width: 900px) {
+        width: 45%;
+        margin-bottom: 0;
+        text-align: left;
+      }
+  
+      h2 {
+        font-size: clamp(1.8rem, 2.5vw, 3rem);
+        margin-bottom: 10px;
+      }
+  
+      h3 {
+        font-size: clamp(1.5rem, 2vw, 2.5rem);
+        margin-bottom: 15px;
+      }
+  
+      p {
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        line-height: 1.6;
+        margin-bottom: 10px;
+      }
+  
+      .gift-button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: clamp(1rem, 1.5vw, 1.5rem);
+        background-color: #000; /* Цвет кнопки */
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  
+    .gift-image {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+  
+      @media (min-width: 900px) {
+        width: 45%;
+      }
+  
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+  /* Первый контейнер */
+.first-container {
+    width: 100%;
+    padding: 50px 0;
+    position: relative;
+    text-align: center;
+  
+    h1 {
+      font-size: clamp(2rem, 4.5vw, 6rem);
+      margin: 0;
+      font-weight: bold;
+    }
+  
+    .line1 {
+      position: relative;
+      left: -15%; // Слегка левее центра
+    }
+  
+    .line2 {
+      position: relative;
+      left: 15%; // Слегка правее центра
+    }
+  }
+  
+  /* Второй контейнер: Слайдер изображений */
+  .image-slider {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 0;
+  
+    .slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+        
+      .slider-track {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        // Это свойство задаёт плавную анимацию при изменении transform
+      }
+  
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+  
+      .nav-arrows {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+  
+        .prev,
+        .next {
+          cursor: pointer;
+          font-size: 2rem;
+          color: #ffffff;
+          background-color: rgba(255, 255, 255, 0.2);
+          padding: 10px;
+          user-select: none;
+        }
+      }
+  
+      .nav-dots {
+        position: relative;
+        bottom: 0;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+      
+        span {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          margin: 0 5px;
+          background-color: gray;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      
+        .active {
+          background-color: black;
+        }
+      }
+    }
+  }
+  
+  /* Третий контейнер */
+  .ambassadors-container {
+    text-align: center;
+    padding: 50px 0;
+  
+    h1 {
+      font-size: clamp(2rem, 6vw, 6rem);
+      font-weight: bold;
+      margin: 0;
+    }
+  }
+  
+  /* Четвертый контейнер */
+  .info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px auto;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  
+    .text-block {
+      width: 100%;
+      margin-bottom: 20px;
+  
+      p {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        line-height: 1.6;
+      }
+    }
+  
+    .square-block {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  
+    /* От 768px до 1200px */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .text-block {
+        width: 45%;
+      }
+  
+      .square-block {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  
+    /* От 1200px и выше */
+    @media (min-width: 1200px) {
+      .text-block {
+        width: 30%;
+      }
+  
+      .square-block {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+  }
+  .event-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+  
+  .event-container {
+    width: 80%;
+    margin: 0px auto;
+  }
+  
+  .event {
+    border-top: 1px solid black; /* Черта сверху */
+    padding: 1px 0;
+    display: flex;
+    justify-content: flex-start; /* Изменено на flex-start для прижатия к левому краю */
+    align-items: flex-start; /* Прижимаем к верхней части контейнера */
+  }
+  
+  .event-details {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+  }
+  
+  .media-container {
+    display: flex;
+    flex-direction: row; /* Вертикальное расположение для заголовка и квадрата */
+    align-items: center; /* Центрируем по горизонтали */
+    margin-left: 30%; /* Вертикальные отступы от общего контейнера */
+    width: 70%; /* Устанавливаем ширину с отступами от краев экрана */
+  
+    p {
+      margin-top: 0; /* Убираем отступы у заголовка */
+      font-size: clamp(3rem, 6vw, 5rem); /* Увеличенный размер шрифта */
+      text-align: center; /* Центрируем текст по горизонтали */
+    }
+  
+    .square-block {
+      margin-top: 80px; /* Значительный отступ между заголовком и квадратом */
+      width: 100%; /* Задаем ширину квадрату */
+      display: flex;
+      justify-content: center; /* Центрируем квадрат */
+    }
+  }
+  
+  .application-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .text-left {
+    align-self: flex-start; /* Для левого текста */
+    margin-left: calc(50% - 50%); /* Практически 0 от края */
+  }
+
+  .text-right {
+    align-self: flex-end; /* Для правого текста */
+    margin-left: calc(50% - 50%); /* Практически 0 от края */
+  }
+  
+  .places-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет переносить элементы на следующую строку */
+    justify-content: space-between; /* Равномерное распределение между элементами */
+    width: 90%; /* Устанавливаем ширину контейнера */
+    margin: auto; /* Центрируем контейнер */
+    
+    img {
+      width: 33%; /* На больших экранах изображения занимают 30% ширины контейнера */
+      height: auto; /* Поддержка пропорций изображения */
+      margin-bottom: 20px; /* Небольшой отступ снизу для каждого изображения */
+    }
+    
+    @media (max-width: 1000px) {
+      img {
+        width: 100%; /* На меньших экранах изображения занимают 80% ширины */
+        margin: 5px auto; /* Центрируем изображения */
+      }
+    }
+  }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+  .emphasis-text {
+    font-size: clamp(3rem, 5vw, 6rem); /* Увеличиваем размер шрифта, адаптивный */
+    line-height: 1.6; /* Высота строки */
+    color: #333; /* Цвет текста, при необходимости измените */
+}

@@ -1,0 +1,78 @@
+.hall-of-fame-container {
+    text-align: center; // Выравнивание текста по центру
+  
+    .image-block {
+      position: relative; // Для позиционирования текста поверх изображения
+  
+      .hall-image {
+        width: 100%; // Ширина 100%
+        height: auto; // Автоматическая высота
+      }
+  
+      .overlay-text {
+        position: absolute; // Позиционирование текста поверх изображения
+        bottom: 10px; // Отступ снизу
+        left: 50%; // Смещение влево
+        transform: translateX(-50%); // Центрирование текста
+        color: white; // Белый цвет текста
+        font-size: 64px; // Адаптивный размер шрифта
+        font-weight: bold; // Жирный шрифт
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Тень для текста, чтобы выделить на фоне
+      }
+    }
+  
+    .parameter-block {
+      margin: 20px 0; // Отступы сверху и снизу
+  
+      .parameter-title {
+        color: black; // Черный цвет текста
+        font-size: 20px; // Размер шрифта
+        font-weight: bold; // Жирный шрифт
+        text-align: center; // Центрирование текста
+      }
+    }
+  }.hall-of-fame-container {
+  text-align: center; // Выравнивание текста по центру
+
+  .image-block {
+    position: relative; // Для позиционирования текста поверх изображения
+
+    .hall-image {
+      width: 100%; // Ширина 100%
+      height: auto; // Автоматическая высота
+    }
+
+    .overlay-text {
+      position: absolute; // Позиционирование текста поверх изображения
+      bottom: 10px; // Отступ снизу
+      left: 50%; // Смещение влево
+      transform: translateX(-50%); // Центрирование текста
+      color: white; // Белый цвет текста
+      font-size: 40px; // Адаптивный размер шрифта
+      font-weight: bold; // Жирный шрифт
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Тень для текста, чтобы выделить на фоне
+    }
+  }
+
+  .parameter-block {
+    margin: 20px 0; // Отступы сверху и снизу
+
+    .parameter-title {
+      color: black; // Черный цвет текста
+      font-size: 40px; // Размер шрифта
+      font-weight: bold; // Жирный шрифт
+      text-align: center; // Центрирование текста
+    }
+  }
+}
+.cards-container {
+    display: flex; /* Используем Flexbox */
+    flex-wrap: wrap; /* Позволяем элементам переходить на новую строку */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+  }
+
+.footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 200px;
+  }

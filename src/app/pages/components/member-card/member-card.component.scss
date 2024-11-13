@@ -1,0 +1,29 @@
+.member-card {
+    max-width: 300px; // Максимальная ширина карточки
+    margin: 20px auto; // Центрирование карточки
+    text-align: left; // Выравнивание текста влево
+    padding: 10px; // Отступ внутри карточки
+  
+    .member-photo {
+      width: 100%; // Ширина фото 100% от карточки
+      height: auto; // Автоматическая высота
+    }
+  
+    .member-name {
+      font-size: 18px; // Размер шрифта имени
+      font-weight: bold; // Жирный шрифт
+      margin: 10px 0; // Отступы сверху и снизу
+    }
+  
+    .divider {
+      background-color: black; // Черный цвет линии
+      height: 2px; // Высота линии
+      width: 100%; // Ширина линии 100% от карточки
+      margin: 5px 0; // Отступы сверху и снизу
+    }
+  
+    .member-year {
+      font-size: 14px; // Размер шрифта для года
+      margin: 0; // Убираем отступы
+    }
+  }

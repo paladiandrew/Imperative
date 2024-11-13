@@ -1,0 +1,228 @@
+<div class="home">
+  <div class="cover-container">
+    <div class="cover">
+      <video autoplay muted loop>
+        <source src="assets/videos/main.MP4" type="video/mp4" />
+        Ваш браузер не поддерживает тег video.
+      </video>
+    </div>
+    <div class="overlay">
+      <h1 class="text-line line1">Мужской книжный бизнес-клуб</h1>
+      <p class="text-line line4">
+        <br />
+        обсуждаем в окружении единомышленников<br />
+        и применяем знания в личной жизни<br />
+        и в бизнесе.
+      </p>
+      <h1 class="text-line line2">Императив</h1>
+      <h1 class="text-line line3">Мы читаем великие книги вместе</h1>
+    </div>
+  </div>
+  <div class="info-container">
+    <div class="info-block first-text-block">
+      <p>
+        Мы встречаемся еженедельно, обсуждаем важные темы и применяем знания на
+        практике. Каждую встречу клуба мы чередуем по формату: онлайн по
+        субботам и офлайн по средам и четвергам в центре Москвы.
+      </p>
+    </div>
+
+    <div class="info-block second-row">
+      <div class="second-text-block">
+        <p class="emphasis-text">
+          В клубе могут состоять только успешные предприниматели. Мы создаем
+          атмосферу, где можно обмениваться опытом, участвовать в крупных
+          мероприятиях и расти вместе.
+        </p>
+      </div>
+
+      <div class="square-block">
+        <app-square-redirect
+          [pageName]="'О КЛУБЕ'"
+          [route]="'/about'"
+        ></app-square-redirect>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+  <div class="learning-community">
+    <div class="image-container">
+      <img src="assets/images/presentation.png" alt="Presentation Image" />
+    </div>
+    <div class="text-container">
+      <h2 class="heading">Сила обучения в сообществе</h2>
+      <p class="programs">Годовая программа книг</p>
+      <p class="description">
+        Мы читаем книги не только по бизнесу, но и по личностному развитию,
+        искусству общения и художественной литературе.
+      </p>
+    </div>
+  </div>
+  <div class="bottom-spacer"></div>
+  <div class="gift-certificate-container">
+    <div class="gift-text">
+      <h2>Подарочный сертификат</h2>
+      <h3>Подари слово.</h3>
+      <p>Вы можете подарить обучение в клубе вашим близким.</p>
+      <p>Минимальная сумма номинала 50.000</p>
+      <button class="gift-button">ОСТАВИТЬ ЗАЯВКУ</button>
+    </div>
+    <div class="gift-image">
+      <img src="assets/images/diplom.jpg" alt="Подарочный сертификат" />
+    </div>
+  </div>
+  <!-- Первый контейнер -->
+  <div class="first-container">
+    <h1 class="line1">(пространство</h1>
+    <h1 class="line2">клуба)</h1>
+  </div>
+
+  <!-- Второй контейнер: Слайдер изображений -->
+  <div class="image-slider">
+    <div class="slider-container">
+      <div class="slider-track" [style.transform]="transform">
+        <img
+          *ngFor="let image of images; let i = index"
+          [src]="image"
+          [alt]="'Place Image ' + (i + 1)"
+          class="slide"
+        />
+      </div>
+      <div class="nav-arrows">
+        <span class="prev" (click)="prevImage()">&lt;</span>
+        <span class="next" (click)="nextImage()">&gt;</span>
+      </div>
+      <div class="nav-dots">
+        <span
+          *ngFor="let image of images; let i = index"
+          [class.active]="i === currentIndex"
+          (click)="goToImage(i)"
+        ></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Третий контейнер -->
+  <div class="ambassadors-container">
+    <h1>амбассадоры</h1>
+  </div>
+
+  <!-- Четвертый контейнер -->
+  <div class="info-section">
+    <div class="text-block first-text">
+      <p>
+        Официальные лица клуба из числа выпускников программ и участников
+        закрытого сообщества members. Никто лучше самих участников Клуба не
+        расскажет вам о том, что такое наш клуб и как он может поменять жизнь
+        тех, кто приходит сюда учиться.
+      </p>
+    </div>
+    <div class="text-block second-text">
+      <p>
+        Aмбассадоры транслируют ценности клуба, строят вокруг себя сообщество,
+        участвуют в съемках рекламных кампаний.
+      </p>
+    </div>
+    <div class="square-block">
+      <app-square-redirect
+        [pageName]="'О КЛУБЕ'"
+        [route]="'/about'"
+      ></app-square-redirect>
+    </div>
+  </div>
+  <app-ambassador-slider></app-ambassador-slider>
+  <div class="bottom-spacer"></div>
+  <div class="event-title">
+    <h1>События</h1>
+  </div>
+
+  <!-- Text Block Container -->
+  <div class="info-container">
+    <div class="info-block first-text-block">
+      <p>
+        Мы проводим мероприятия для членов клуба, спецпроекты, встречи и
+        коллаборации.
+      </p>
+    </div>
+
+    <div class="info-block second-row">
+      <div class="second-text-block">
+        <p class="emphasis-text">
+          Обмен опытом и идеями внутри сообщества, встречи с приглашенными
+          гостями и мастер-классы.
+        </p>
+      </div>
+
+      <div class="square-block">
+        <app-square-redirect
+          [pageName]="'ВСЕ СОБЫТИЯ'"
+          [route]="'/events'"
+        ></app-square-redirect>
+      </div>
+    </div>
+  </div>
+
+  <!-- Event Containers -->
+  <div class="event-container">
+    <div class="event">
+      <div class="line"></div>
+      <div class="event-details">
+        <div>
+          <p>Окт</p>
+          <p>16</p>
+        </div>
+        <div>
+          <p>19:30 - 21:00</p>
+          <p>Лекция Сати Спиваковой</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Повторите этот блок для других событий -->
+
+  <div class="bottom-spacer"></div>
+
+  <!-- Media Container -->
+  <div class="media-container">
+    <p>(Медиа)</p>
+    <div class="square-block">
+      <app-square-redirect
+        [pageName]="'ВСЕ МЕДИА'"
+        [route]="'/media'"
+      ></app-square-redirect>
+    </div>
+  </div>
+
+  <div class="bottom-spacer"></div>
+
+  <!-- Places Component -->
+  <div class="places-container">
+    <img src="assets/images/media1.jpg" alt="Place 1" />
+    <img src="assets/images/media3.jpg" alt="Place 2" />
+    <img src="assets/images/media2.jpg" alt="Place 3" />
+  </div>
+
+  <div class="bottom-spacer"></div>
+
+  <!-- Application Container -->
+  <div class="first-container">
+    <h1 class="line1">(Оставьте заявку</h1>
+    <h1 class="line2">На собеседование)</h1>
+  </div>
+  <div class="application-container">
+    <div class="square-block">
+      <app-square-redirect
+        [pageName]="'ВСЕ СОБЕСЕДОВАНИЯ'"
+        [route]="'/interviews'"
+      ></app-square-redirect>
+    </div>
+  </div>
+
+  <div class="bottom-spacer"></div>
+
+  <p class="footer-text">
+    © 2011-2024 THE ORATOR CLUB | ООО «КЛУБ ОРАТОРОВ», ИНН 7725843515 / KLUB
+    ORATOROV, OOO TIN 7725843515
+  </p>
+</div>
