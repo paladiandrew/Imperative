@@ -8,10 +8,10 @@
     justify-content: space-between;
     padding: 15px 15px;
     z-index: 10;
-    background-color: transparent; // или другой фон, если требуется
-  
-    color: #000; // Стандартный цвет текста
-    
+    background-color: transparent;
+
+    color: #000;
+
     .logo {
       img {
         height: 100px;
@@ -19,7 +19,7 @@
         border-radius: 50%;
       }
     }
-  
+
     .nav {
       flex: 1;
       margin: 0 5%;
@@ -33,36 +33,36 @@
           flex-direction: column;
           align-items: flex-start;
           margin: 0 15px;
-  
+
           a {
             margin: 8px 10px;
             text-decoration: none;
             color: inherit; // Наследует цвет от .header
             font-weight: 900;
-            font-size: 1.7vw;
+            font-size: 1.5vw; // Уменьшите размер шрифта
           }
         }
       }
     }
-  
+
     .mobile-menu-icon {
       display: flex;
       flex-direction: column;
       cursor: pointer;
       margin-right: 7%;
-  
+
       span {
         width: 25px;
         height: 3px;
-        background: #000; // Стандартный цвет иконки
+        background: #000;
         margin: 4px 0;
         transition: 0.4s;
       }
     }
-  
+
     .mobile-menu {
       display: none;
-  
+
       &.open {
         display: block;
         position: fixed;
@@ -74,18 +74,18 @@
         transform: translateX(0);
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
-  
+
         .mobile-menu-header {
           display: flex;
           justify-content: flex-end;
           padding: 20px;
-  
+
           .close-icon {
             position: relative;
             width: 24px;
             height: 24px;
             cursor: pointer;
-  
+
             &::before,
             &::after {
               content: '';
@@ -97,73 +97,73 @@
               background-color: black;
               transform-origin: center;
             }
-  
+
             &::before {
               transform: translate(-50%, -50%) rotate(45deg);
             }
-  
+
             &::after {
               transform: translate(-50%, -50%) rotate(-45deg);
             }
           }
         }
-  
+
         .mobile-nav {
           display: flex;
           flex-direction: column;
           align-items: flex-end;
           padding: 0 20px;
-  
+
           a {
             margin: 15px 0;
             text-decoration: none;
-            color: #000;
-            font-size: 1rem;
+            color: #000; // Черный цвет текста
+            font-size: 1.2rem; // Уменьшите шрифт для мобильного меню
             font-weight: bold;
           }
         }
       }
     }
-  
+
     @media (max-width: 768px) {
       .mobile-menu-icon {
-        display: flex; // Показываем иконку мобильного меню на мобильных устройствах
+        display: flex; 
       }
       
       .nav {
         display: none;
       }
-  
+
       .logo img {
         height: 90px;
       }
     }
-  
+
     // Стили для главной страницы
     &.home {
-      color: #fff; // Белый цвет текста на главной странице
-  
+      color: #fff;
+
       .nav a {
-        color: #fff; // Белый цвет навигационных ссылок
+        color: #fff;
       }
-  
+
       .mobile-menu-icon span {
-        background: #fff; // Белый цвет иконки мобильного меню
+        background: #fff; 
       }
-  
+
       .mobile-menu {
         .mobile-menu-header {
           .close-icon {
             &::before,
             &::after {
-              background-color: #fff; // Белый цвет крестика закрытия
+              background-color: #fff; 
             }
           }
         }
-  
+
         .mobile-nav a {
-          color: #fff; // Цвет ссылок внутри мобильного меню (можно изменить при необходимости)
+          color: #fff; 
         }
       }
     }
-  }
+}
