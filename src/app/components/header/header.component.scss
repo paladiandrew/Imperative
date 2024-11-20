@@ -9,7 +9,6 @@
     padding: 15px 15px;
     z-index: 10;
     background-color: transparent;
-
     color: #000;
 
     .logo {
@@ -27,7 +26,7 @@
       .nav-columns {
         display: flex;
         justify-content: space-between;
-        
+
         .nav-column {
           display: flex;
           flex-direction: column;
@@ -49,7 +48,7 @@
       display: flex;
       flex-direction: column;
       cursor: pointer;
-      margin-right: 7%;
+      margin-right: 0; // Уберите margin-right
 
       span {
         width: 25px;
@@ -67,8 +66,8 @@
         display: block;
         position: fixed;
         top: 0;
-        right: 0;
-        width: 100%;
+        left: 0; // Измените right на left для правильного отображения
+        width: 100%; // Полная ширина экрана
         height: 100%;
         background: rgba(255, 255, 255, 0.95);
         transform: translateX(0);
@@ -112,7 +111,7 @@
         .mobile-nav {
           display: flex;
           flex-direction: column;
-          align-items: flex-end;
+          align-items: center; // Центрируйте элементы
           padding: 0 20px;
 
           a {
@@ -128,15 +127,15 @@
 
     @media (max-width: 768px) {
       .mobile-menu-icon {
-        display: flex; 
+        display: flex; // Иконка мобильного меню видима
       }
       
       .nav {
-        display: none;
+        display: none; // Скрыть навигацию для ПК
       }
 
       .logo img {
-        height: 90px;
+        height: 90px; // Уменьшение высоты логотипа для мобильной версии
       }
     }
 
