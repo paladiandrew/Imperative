@@ -3,14 +3,15 @@
     top: 0;
     left: 0;
     width: 100%;
-    position: absolute;
+    position: relative; // Изменено на relative для правильной работы с абсолютными дочерними элементами
     align-items: center;
     justify-content: space-between;
-    padding: 15px 15px;
+    padding: 15px; // Используем padding для равномерного отступа
     z-index: 10;
-    background-color: transparent;
-    color: #000;
+    background-color: transparent; // Или другой фон, если требуется
   
+    color: #000; // Стандартный цвет текста
+    
     .logo {
       img {
         height: 100px;
@@ -21,12 +22,12 @@
   
     .nav {
       flex: 1;
-      margin: 0 5%;
-  
+      margin: 0 5%; // Обратите внимание, отступы могут быть расширены или уменьшены
+      
       .nav-columns {
         display: flex;
         justify-content: space-between;
-  
+        
         .nav-column {
           display: flex;
           flex-direction: column;
@@ -38,24 +39,21 @@
             text-decoration: none;
             color: inherit; // Наследует цвет от .header
             font-weight: 900;
-            font-size: 1.5vw; // Уменьшите размер шрифта
+            font-size: 1.7vw;
           }
         }
       }
     }
   
     .mobile-menu-icon {
-      display: flex;
+      display: none; // По умолчанию скрыто, видимо только на мобильных
       flex-direction: column;
       cursor: pointer;
-      position: absolute; // Абсолютное позиционирование
-      right: 15px; // Отступ от правого края
-      top: 15px; // Отступ от верхнего края
   
       span {
         width: 25px;
         height: 3px;
-        background: #000;
+        background: #000; // Стандартный цвет иконки
         margin: 4px 0;
         transition: 0.4s;
       }
@@ -65,17 +63,14 @@
       display: none;
   
       &.open {
-        display: block;
+        display: flex; // Используем flex для правильного расположения элементов
         position: fixed;
         top: 0;
-        right: 0; // Меню прижато к правому краю
-        width: 100%; // Полная ширина экрана
+        right: 0;
+        width: 100%; // Полная ширина
         height: 100%;
         background: rgba(255, 255, 255, 0.95);
-        transform: translateX(0);
-        transition: transform 0.3s ease-in-out;
         z-index: 1000;
-        box-sizing: border-box;
   
         .mobile-menu-header {
           display: flex;
@@ -87,10 +82,6 @@
             width: 24px;
             height: 24px;
             cursor: pointer;
-  
-            position: absolute; // Абсолютное позиционирование
-            right: 15px; // Отступ от правого края
-            top: 15px; // Отступ от верхнего края
   
             &::before,
             &::after {
@@ -117,14 +108,14 @@
         .mobile-nav {
           display: flex;
           flex-direction: column;
-          align-items: flex-end; // Элементы прижаты к правому краю
+          align-items: flex-end;
           padding: 0 20px;
   
           a {
             margin: 15px 0;
             text-decoration: none;
-            color: #000; // Черный цвет текста
-            font-size: 1.2rem; // Уменьшите шрифт для мобильного меню
+            color: #000; // Цвет текста
+            font-size: 1rem;
             font-weight: bold;
           }
         }
@@ -133,11 +124,14 @@
   
     @media (max-width: 768px) {
       .mobile-menu-icon {
-        display: flex; // Иконка мобильного меню видима
+        display: flex; // Показываем иконку мобильного меню
+        position: absolute; // Устанавливаем иконку в верхний правый угол
+        right: 15px;
+        top: 15px;
       }
-  
+
       .nav {
-        display: none; // Скрыть навигацию для ПК
+        display: none; // Скрываем навигацию для ПК
       }
   
       .logo img {
@@ -147,29 +141,29 @@
   
     // Стили для главной страницы
     &.home {
-      color: #fff;
+      color: #fff; // Белый цвет текста на главной странице
   
       .nav a {
-        color: #fff;
+        color: #fff; // Белый цвет навигационных ссылок
       }
   
       .mobile-menu-icon span {
-        background: #fff; 
+        background: #fff; // Белый цвет иконки мобильного меню
       }
-  
+
       .mobile-menu {
         .mobile-menu-header {
           .close-icon {
             &::before,
             &::after {
-              background-color: #fff; 
+              background-color: #fff; // Белый цвет крестика закрытия
             }
           }
         }
   
         .mobile-nav a {
-          color: #fff; 
+          color: #fff; // Цвет ссылок внутри мобильного меню
         }
       }
     }
-  }
+}
