@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    position: relative; 
+    position: relative;
     align-items: center;
     justify-content: space-between; // Прижимаем элементы к краям
     padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
@@ -13,7 +13,7 @@
     color: #000; // Стандартный цвет текста
     
     .logo {
-      margin-right: auto; 
+      margin-right: auto; // Перемещаем логотип влево
       img {
         height: 100px;
         background-color: #000; 
@@ -25,7 +25,6 @@
       display: flex;
       flex: 1;
       justify-content: flex-end; 
-      margin-right: 0; 
       
       .nav-columns {
         display: flex;
@@ -53,7 +52,7 @@
       flex-direction: column;
       cursor: pointer;
       position: absolute; 
-      right: 5%; 
+      right: 5%; // Отступ от правого края
       top: 15px; 
   
       span {
@@ -80,9 +79,9 @@
   
         .mobile-menu-header {
           display: flex;
-          justify-content: flex-end;
+          justify-content: flex-end; // Крестик прижат к правому краю
           padding: 20px;
-          width: 100%; // Занимает всю ширину
+          width: 100%; // Занимает всю ширину отвечает за размещение крестика
   
           .close-icon {
             position: relative;
@@ -125,6 +124,8 @@
             color: #000; // Черный цвет текста
             font-size: 1rem;
             font-weight: bold;
+            width: 100%; // Занимаем всю ширину, чтобы кнопки были под крестиком
+            text-align: right; // Выравнивание текста вправо
           }
         }
       }
