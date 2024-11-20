@@ -9,7 +9,7 @@
     padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
     z-index: 10;
     background-color: transparent; // Фон заголовка
-  
+    
     color: #000; // Стандартный цвет текста
     
     .logo {
@@ -81,13 +81,15 @@
           display: flex;
           justify-content: flex-end; // Крестик прижат к правому краю
           padding: 20px;
-          width: 100%; // Занимает всю ширину отвечает за размещение крестика
+          width: 100%; // Занимает всю ширину
+          position: relative; // Устанавливаем относительное позиционирование
   
           .close-icon {
-            position: relative;
             width: 24px;
             height: 24px;
             cursor: pointer;
+            position: absolute; // Абсолютное позиционирование для точного размещения
+            right: 0; // Крестик прижат к правому краю
   
             &::before,
             &::after {
@@ -124,7 +126,7 @@
             color: #000; // Черный цвет текста
             font-size: 1rem;
             font-weight: bold;
-            width: 100%; // Занимаем всю ширину, чтобы кнопки были под крестиком
+            width: 100%; // Занимаем всю ширину
             text-align: right; // Выравнивание текста вправо
           }
         }
