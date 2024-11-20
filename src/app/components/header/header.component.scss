@@ -3,10 +3,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    position: relative; // Изменено на relative для правильной работы с абсолютными дочерними элементами
+    position: relative; // Для правильного позиционирования дочерних элементов
     align-items: center;
-    justify-content: flex-end; // Прижимаем все элементы к правому краю
-    padding: 15px 10%; // Отступы сверху и снизу, 10% с правого края
+    justify-content: space-between; // Прижимаем элементы к краям
+    padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
     z-index: 10;
     background-color: transparent; // Или другой фон, если требуется
   
@@ -16,7 +16,7 @@
       margin-right: auto; // Перемещаем логотип влево
       img {
         height: 100px;
-        background-color: #000;
+        background-color: #000; // Цвет фона логотипа
         border-radius: 50%;
       }
     }
@@ -24,7 +24,7 @@
     .nav {
       display: flex;
       flex: 1;
-      justify-content: flex-end; // Также прижимаем навигацию к правому краю
+      justify-content: flex-end; // Прижимаем навигацию к правому краю
       margin-right: 0; // Убираем дополнительные отступы справа
       
       .nav-columns {
@@ -35,7 +35,7 @@
           display: flex;
           flex-direction: column;
           align-items: flex-start;
-          margin: 0 15px;
+          margin: 0 15px; // Отступы между столбцами
   
           a {
             margin: 8px 10px;
@@ -53,7 +53,7 @@
       flex-direction: column;
       cursor: pointer;
       position: absolute; // Абсолютное позиционирование
-      right: 10%; // Отступ от правого края
+      right: 5%; // Отступ от правого края
       top: 15px; // Отступ сверху
   
       span {
@@ -97,7 +97,7 @@
               top: 50%;
               width: 24px;
               height: 2px;
-              background-color: black;
+              background-color: black; // Цвет крестика
               transform-origin: center;
             }
   
@@ -114,13 +114,13 @@
         .mobile-nav {
           display: flex;
           flex-direction: column;
-          align-items: flex-end;
-          padding: 0 20px;
+          align-items: flex-end; // Элементы прижаты к правому краю
+          padding: 0 5%; // Отступ 5% слева и справа
   
           a {
             margin: 15px 0;
             text-decoration: none;
-            color: #000; // Цвет текста
+            color: #000; // Черный цвет текста
             font-size: 1rem;
             font-weight: bold;
           }
