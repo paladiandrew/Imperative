@@ -80,7 +80,7 @@
   
         .mobile-menu-header {
           display: flex;
-          justify-content: flex-end;
+          justify-content: flex-start;
           padding: 20px;
   
           .close-icon {
@@ -114,7 +114,7 @@
         .mobile-nav {
           display: flex;
           flex-direction: column;
-          align-items: flex-end; // Элементы прижаты к правому краю
+          align-items: flex-start; // Элементы прижаты к правому краю
           padding: 0 5%; // Отступ 5% слева и справа
   
           a {
