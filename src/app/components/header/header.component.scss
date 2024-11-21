@@ -3,17 +3,17 @@
     top: 0;
     left: 0;
     width: 100%;
-    position: relative;
+    position: fixed; // Заголовок фиксирован на месте
     align-items: center;
-    justify-content: space-between; // Прижимаем элементы к краям
+    justify-content: space-between; // Элементы прижаты к краям
     padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
-    z-index: 10;
-    background-color: transparent; // Фон заголовка
+    z-index: 1000; // Убедимся, что заголовок всегда поверх
+    background-color: rgba(255, 255, 255, 0.95); // Фон заголовка с прозрачностью
     
     color: #000; // Стандартный цвет текста
     
     .logo {
-      margin-right: auto; // Перемещаем логотип влево
+      flex-shrink: 0; // Запрещаем уменьшение логотипа
       img {
         height: 100px;
         background-color: #000; 
@@ -24,11 +24,11 @@
     .nav {
       display: flex;
       flex: 1;
-      justify-content: flex-end; 
+      justify-content: flex-end; // Прижимаем навигацию вправо
       
       .nav-columns {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; // Группируем по 2 колонки
         
         .nav-column {
           display: flex;
@@ -75,21 +75,20 @@
         width: 100%; 
         height: 100%;
         background: rgba(255, 255, 255, 0.95);
-        z-index: 1000;
+        z-index: 999; // Меню ниже чем заголовок
   
         .mobile-menu-header {
           display: flex;
           justify-content: flex-end; // Крестик прижат к правому краю
           padding: 20px;
-          width: 100%; // Занимает всю ширину
-          position: relative; // Устанавливаем относительное позиционирование
+          width: 100%; 
   
           .close-icon {
             width: 24px;
             height: 24px;
             cursor: pointer;
-            position: absolute; // Абсолютное позиционирование для точного размещения
-            right: 0; // Крестик прижат к правому краю
+            position: absolute; // Абсолютное позиционирование
+            right: 10px; // Крестик прижат к правому краю с отступом
   
             &::before,
             &::after {
