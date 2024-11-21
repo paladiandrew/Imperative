@@ -3,6 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    position: fixed; // Заголовок фиксирован на месте
     align-items: center;
     justify-content: space-between; // Элементы прижаты к краям
     padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
