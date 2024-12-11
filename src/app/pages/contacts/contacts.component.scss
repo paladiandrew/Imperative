@@ -7,64 +7,59 @@
       font-weight: bold; // Жирный шрифт
       text-align: center; // Центрирование текста
     }
-  }
+}
 
-  .text-block {
+.text-block {
     width: 60%; // Ширина блока
     margin: 0 auto; // Центрирование по горизонтали
     padding-top: 10px;
     padding-bottom: 50px;
     font-size: 24px;
-    
+
     // Отступы от краев экрана
     @media (max-width: 768px) {
       width: 90%; // Увеличиваем ширину для мобильных устройств
       margin-left: 5%; // Отступы равные 5% от краев экрана на мобильных
       margin-right: 5%;
     }
-  }
+}
 
-  .social-links-block {
+.social-links-block {
     background-color: #f0f0f0; // Бледно-серый фон
     width: 100%; // Блок на всю ширину экрана
-    padding: 20px 0px; // Отступы сверху и снизу
+    padding: 20px 0; // Отступы сверху и снизу
     margin-top: 20px;
+
     .section-title {
       margin-left: 15%; // Отступ от левого края для заголовка
       font-size: 32px; // Размер шрифта заголовка
       font-weight: bold; // Жирный шрифт
       margin-bottom: 50px; // Отступ снизу
     }
-  
+
     .links-container {
       display: flex; // Используем flexbox для распределения элементов
       align-items: center; // Центрирование по вертикали
       margin: 0 15%; // Отступы слева и справа
-  
+
       .left-image {
         width: 200px; // Ширина изображения (можно изменить по желанию)
         height: auto; // Авто высота
         margin-right: 50px; // Отступ справа от изображения
       }
-  
-      .text-column {
-        display: flex;
+
+      .link-item {
+        display: flex; // Используем flexbox для выравнивания
         flex-direction: column; // Вертикальное направление
         justify-content: center; // Центрирование текста по вертикали
-        width: 45%; // Ширина столбца с текстом
-  
+        margin: 10px 0; // Отступ между элементами
+        width: 100%; // Установка ширины для удобства отображения
+
         .link-text {
           margin-bottom: 10px; // Отступ снизу для текста
           font-size: 24px; // Размер шрифта текста
         }
-      }
-  
-      .button-column {
-        display: flex;
-        flex-direction: column; // Вертикальное направление для кнопок
-        justify-content: center; // Центрирование кнопок по вертикали
-        width: 45%; // Ширина столбца с кнопками
-  
+
         .link-button {
           display: flex; // Используем flexbox для кнопки
           align-items: center; // Центрирование по вертикали
@@ -73,25 +68,40 @@
           padding: 10px; // Отступы внутри кнопки
           border-radius: 5px; // Сглаженные углы
           cursor: pointer; // Указатель при наведении
-          margin-bottom: 5px; // Отступ между кнопками
-          position: relative; // Позиционирование для изображения
-  
+          max-width: 200px; // Максимальная ширина кнопки
+
           .link-icon {
-            position: absolute; // Абсолютное позиционирование
-            left: 10px; // Отступ от левого края кнопки
-            width: 20px; // Ширина изображения
+            width: 20px; // Ширина изображения иконки
             height: auto; // Авто высота
-          }
-  
-          span {
-            margin-left: 30px; // Отступ для текста от изображения
+            margin-right: 10px; // Отступ справа от иконки
           }
         }
       }
     }
-  }
-  .footer-text {
+}
+
+// Мобильные стили
+@media (max-width: 768px) {
+    .social-links-block {
+      .links-container {
+        flex-direction: column; // Вертикальное направление на мобильных
+        align-items: center; // Центрирование по горизонтали
+
+        .left-image {
+          width: 90%; // Ширина изображения на мобильных
+          margin: 20px 0; // Отступ сверху и снизу
+        }
+
+        .link-item {
+          width: 100%; // Полная ширина для удобства
+          text-align: center; // Центрирование текста
+        }
+      }
+    }
+}
+
+.footer-text {
     text-align: center;
     font-size: 0.8rem;
     margin-top: 200px;
-  }
+}

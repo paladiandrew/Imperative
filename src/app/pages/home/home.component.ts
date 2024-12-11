@@ -1,13 +1,14 @@
 import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, NgZone } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { SquareRedirectComponent } from '../components/square-redirect/square-redirect.component';
+import { HeaderComponent } from '../components/header/header.component';
 import { AmbassadorSliderComponent } from '../components/ambassador-slider/ambassador-slider.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, SquareRedirectComponent, AmbassadorSliderComponent],
+  imports: [CommonModule, HeaderComponent, SquareRedirectComponent, AmbassadorSliderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })

@@ -77,8 +77,7 @@
           background-color: gray;
           border-radius: 50%;
           cursor: pointer;
-  
-          // Убедитесь, что нет тени
+
           box-shadow: none; // Убираем тень, если была
         
           &.active {

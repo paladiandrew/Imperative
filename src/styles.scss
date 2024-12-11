@@ -15,3 +15,7 @@ html, body {
     //overflow-x: hidden; // Отключаем горизонтальную прокрутку
     font-family: 'BusinessClubFont', sans-serif;
 }
+
+* {
+    box-sizing: border-box;
+}

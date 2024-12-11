@@ -1,11 +1,12 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AmbassadorSliderComponent } from '../components/ambassador-slider/ambassador-slider.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   selector: 'app-about-club',
   standalone: true,
-  imports: [CommonModule, AmbassadorSliderComponent],
+  imports: [CommonModule, HeaderComponent, AmbassadorSliderComponent],
   templateUrl: './about-club.component.html',
   styleUrls: ['./about-club.component.scss']
 })

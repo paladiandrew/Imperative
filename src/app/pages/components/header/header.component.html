@@ -28,13 +28,18 @@
 
   <!-- Иконка мобильного меню -->
   <div class="mobile-menu-icon" (click)="toggleMobileMenu()" *ngIf="isMobile">
-    <span></span>
-    <span></span>
-    <span></span>
+    <span [ngClass]="{ black: !isHomePage, white: isHomePage }"></span>
+    <span [ngClass]="{ black: !isHomePage, white: isHomePage }"></span>
+    <span [ngClass]="{ black: !isHomePage, white: isHomePage }"></span>
   </div>
 
   <!-- Мобильное меню  -->
-  <div class="mobile-menu" [class.open]="isMobileMenuOpen" *ngIf="isMobile">
+  <div
+    class="mobile-menu"
+    [class.open]="isMobileMenuOpen"
+    *ngIf="isMobile"
+    [ngClass]="{ white: isHomePage }"
+  >
     <div class="mobile-menu-header">
       <div (click)="toggleMobileMenu()" class="close-icon"></div>
     </div>

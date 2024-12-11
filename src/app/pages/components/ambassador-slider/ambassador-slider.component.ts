@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID, NgZone, Renderer2, ElementRef, HostListener} from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, Inject, PLATFORM_ID, NgZone, Renderer2, ElementRef, HostListener } from '@angular/core';
 import { ChangeDetectorRef } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './ambassador-slider.component.html',
   styleUrls: ['./ambassador-slider.component.scss'],
 })
-export class AmbassadorSliderComponent implements OnInit {
+export class AmbassadorSliderComponent implements OnInit, AfterViewInit {
     images = [
       'assets/images/photo1.jpg',
       'assets/images/photo2.jpg',
@@ -28,6 +28,12 @@ export class AmbassadorSliderComponent implements OnInit {
     ngOnInit() {
       if (isPlatformBrowser(this.platformId)) {
         this.updateDisplayedImages();
+      }
+    }
+
+    ngAfterViewInit() {
+      if (isPlatformBrowser(this.platformId)) {
+        this.updateSlideWidth(); // Вызываем обновление ширины после рендеринга компонента
       }
     }
   
@@ -75,7 +81,8 @@ export class AmbassadorSliderComponent implements OnInit {
             (slide as HTMLElement).style.flexBasis = `${(slideWidth / containerWidth) * 100}%`; // переводим ширину в проценты
         });
     }
-      prevImage() {
+
+    prevImage() {
         if (this.currentIndex > 0) {
           this.currentIndex--;
           this.updateSlideWidth(); // Обновление ширины и transform
@@ -97,4 +104,4 @@ export class AmbassadorSliderComponent implements OnInit {
     get totalDots() {
       return this.images.length - this.displayedImages + 1;
     }
-  }
+}

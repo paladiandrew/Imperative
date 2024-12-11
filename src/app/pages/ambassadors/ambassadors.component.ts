@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { AmbassadorCardComponent } from '../components/ambassador-card/ambassador-card.component';
+import { HeaderComponent } from '../components/header/header.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-ambassadors',
   standalone: true,
-  imports: [AmbassadorCardComponent, CommonModule],
+  imports: [AmbassadorCardComponent, HeaderComponent, CommonModule],
   templateUrl: './ambassadors.component.html',
   styleUrl: './ambassadors.component.scss'
 })

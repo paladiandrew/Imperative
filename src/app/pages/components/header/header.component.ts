@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
   
     // Метод для проверки, находимся ли мы на главной странице
     checkIfHomePage() {
-      this.isHomePage = (this.router.url === '/about' || this.router.url === '/hall-of-fame');
+      this.isHomePage = (this.router.url === '/about' || this.router.url === '/hall-of-fame' || this.router.url === '/');
       console.log(this.isHomePage);
     }
   

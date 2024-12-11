@@ -1,0 +1,35 @@
+.parameter-block {
+    margin-top: 150px;
+
+    .parameter-title {
+      color: black; // Черный цвет текста
+      font-size: 40px; // Размер шрифта
+      font-weight: bold; // Жирный шрифт
+      text-align: center; // Центрирование текста
+    }
+  }
+.cards-container {
+    display: flex; /* Используем Flexbox */
+    flex-wrap: wrap; /* Позволяем элементам переходить на новую строку */
+    justify-content: center; /* Центрируем карточки по горизонтали */
+  }
+
+.footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 200px;
+  }
+
+  .text-block {
+    width: 70%; // Ширина блока
+    margin: 0 auto; // Центрирование по горизонтали
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-size: 24px;
+    
+    // Отступы от краев экрана
+    @media (max-width: 768px) {
+      width: 80%; // Увеличиваем ширину для мобильных устройств
+      margin: 0 auto;
+    }
+  }

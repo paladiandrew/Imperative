@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MemberCardComponent } from '../components/member-card/member-card.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 @Component({
   selector: 'app-hall-of-fame',
   standalone: true,
-  imports: [MemberCardComponent, CommonModule],
+  imports: [MemberCardComponent, HeaderComponent, CommonModule],
   templateUrl: './hall-of-fame.component.html',
   styleUrl: './hall-of-fame.component.scss'
 })

@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    position: fixed; // Заголовок фиксирован на месте
+    position: absolute; // Заголовок фиксирован на месте
     align-items: center;
     justify-content: space-between; // Элементы прижаты к краям
     padding: 15px 5%; // Отступы сверху и снизу, 5% с обеих сторон
@@ -15,8 +15,8 @@
     .logo {
       flex-shrink: 0; // Запрещаем уменьшение логотипа
       img {
-        height: 100px;
-        background-color: #000; 
+        width: 100px;
+        background-color: #fff; 
         border-radius: 50%;
       }
     }
@@ -24,11 +24,15 @@
     .nav {
       display: flex;
       flex: 1;
-      justify-content: flex-end; // Прижимаем навигацию вправо
+      align-items: center;
+      justify-content: space-between; // Прижимаем навигацию вправо
       
       .nav-columns {
         display: flex;
         justify-content: space-between; // Группируем по 2 колонки
+        flex: 1; // Занимает все доступное пространство
+        margin-left: 20px; // Отступ слева от логотипа
+        margin-right: 20px; 
         
         .nav-column {
           display: flex;
@@ -41,7 +45,7 @@
             text-decoration: none;
             color: inherit; 
             font-weight: 900;
-            font-size: 1.7vw;
+            font-size: 1.5vw;
           }
         }
       }
@@ -52,15 +56,26 @@
       flex-direction: column;
       cursor: pointer;
       position: absolute; 
-      right: 5%; // Отступ от правого края
-      top: 15px; 
+      right: 6%; // Отступ от правого края
+      top: 30%;
   
       span {
         width: 25px;
-        height: 3px;
-        background: #000; 
+        height: 4px;
+        background: #fff; 
         margin: 4px 0;
         transition: 0.4s;
+        &.black {
+            background: black; // Черный цвет, если не на главной странице
+            border: 1px solid black; // Черный контур
+            border-radius: 10px; // Скругление углов
+          }
+      
+          &.white {
+            background: white; // Белый цвет, если на главной странице
+            border: 1px solid black; // Черный контур
+            border-radius: 10px; // Скругление углов
+          }
       }
     }
   
@@ -88,8 +103,8 @@
             height: 24px;
             cursor: pointer;
             position: absolute; // Абсолютное позиционирование
-            right: 10px; // Крестик прижат к правому краю с отступом
-  
+            right: 20px; // Крестик прижат к правому краю с отступом
+            top: 20px;
             &::before,
             &::after {
               content: '';
@@ -117,13 +132,13 @@
           flex-direction: column; // Кнопки в одном столбце
           align-items: flex-end; // Элементы прижаты к правому краю
           padding: 0 5%; // Отступ 5% слева и справа
-          margin-top: 20px; // Отступ сверху для кнопок
+          margin-top: 40px; // Отступ сверху для кнопок
   
           a {
             margin: 15px 0; // Расстояние между кнопками
             text-decoration: none;
             color: #000; // Черный цвет текста
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: bold;
             width: 100%; // Занимаем всю ширину
             text-align: right; // Выравнивание текста вправо
@@ -151,27 +166,30 @@
       color: #fff; 
   
       .nav a {
-        color: #fff; 
-      }
-  
-      .mobile-menu-icon span {
-        background: #fff; 
-      }
+        color: white; // Текст белый для ПК-версии на главной странице
+    }
 
-      .mobile-menu {
-        .mobile-menu-header {
-          .close-icon {
-            &::before,
-            &::after {
-              background-color: #fff; 
+    .mobile-menu {
+        background: rgba(255, 255, 255, 0.95); // Белый фон для мобильного меню на главной странице
+    }
+
+    .mobile-nav a {
+        color: white; // Текст белый в мобильном меню на главной странице
+    }
+}
+
+    .mobile-menu {
+        background: rgba(0, 0, 0, 0.95); // Черный фон для остальных страниц
+
+        .mobile-nav {
+            a {
+                color: black; // Текст черный для мобильного меню на остальных страницах
             }
-          }
         }
-  
-        .mobile-nav a {
-          color: #fff; 
-        }
-      }
+    }
+
+    .nav a {
+        color: black; // Черный цвет текста в версии для ПК на остальных страницах
     }
 }
 
