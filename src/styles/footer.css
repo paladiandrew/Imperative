@@ -1,0 +1,118 @@
+.footer {
+    width: 100%;
+    height: 150px; /* Увеличено до 150px для десктопа */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Центрируем по вертикали */
+    background-color: #171F2C;
+    color: white;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.footer-links {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.footer-link {
+    font-size: clamp(16px, 1.8vw, 24px);
+    text-decoration: none;
+    color: white;
+    padding: 0 25px;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.footer-link:hover {
+    opacity: 0.8;
+}
+
+.footer-icons {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-top: 5px;
+}
+
+.footer-icon {
+    width: clamp(40px, 5vw, 60px);
+    height: clamp(40px, 5vw, 60px);
+    transition: transform 0.3s;
+    position: absolute;
+}
+
+/* Ваши идеальные значения позиционирования */
+.footer-icon:first-child {
+    left: calc(29% - 25px);
+}
+.footer-icon:last-child {
+    left: calc(73% - 25px);
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Планшетная версия */
+@media (max-width: 1024px) {
+    .footer {
+        height: 120px;
+        padding: 15px 0;
+    }
+    .footer-links {
+        max-width: 700px;
+        padding: 0 20px;
+    }
+}
+
+/* Мобильная версия (640px и меньше) */
+@media (max-width: 768px) {
+    .footer {
+        height: 100px;
+        padding: 10px 0;
+    }
+    .footer-links {
+        max-width: 640px;
+        padding: 0 15px;
+        margin-bottom: 0px;
+    }
+    .footer-link {
+        padding: 0 15px;
+    }
+    .footer-icons {
+        max-width: 500px;
+    }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+    .footer {
+        height: 90px;
+        padding: 8px 0;
+    }
+    .footer-links {
+        padding: 0 10px;
+    }
+    .footer-link {
+        padding: 0 8px;
+        font-size: 14px;
+    }
+    .footer-icon {
+        width: 35px;
+        height: 35px;
+    }
+    /* Адаптируем ваши идеальные значения под мобилки */
+    .footer-icon:first-child {
+        left: calc(25% - 17px);
+    }
+    .footer-icon:last-child {
+        left: calc(79% - 17px);
+    }
+}

@@ -1,0 +1,185 @@
+/* Общие стили */
+.meetings-container {
+    color: white;
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+/* Компонент 1 - Герой */
+.meetings-hero {
+    position: relative;
+    height: 35vh;
+    width: 100%;
+}
+
+.meetings-custom-rectangle {
+    width: 60%;
+    height: 20vh;
+    background-color: #111827;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 2vh;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.meetings-main-title {
+    margin-left: 20%;
+    font-size: clamp(40px, 8vw, 80px); /* Адаптивный шрифт */
+    color: white;
+    z-index: 1;
+}
+
+.meetings-group-photo {
+    width: 30%;
+    position: absolute;
+    left: 70%;
+    top: 10vh;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Компонент 2 */
+.meetings-slogan {
+    width: 75%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.meetings-slogan p {
+    font-size: clamp(24px, 4.5vw, 48px); /* Адаптивный шрифт */
+    margin: 0;
+}
+
+/* Компонент 3 */
+.meetings-description {
+    width: 30%;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+.meetings-description p {
+    font-size: clamp(16px, 3vw, 32px); /* Адаптивный шрифт */
+    text-align: left;
+    margin: 0;
+}
+
+/* Компонент 4 */
+.meetings-event-title {
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 50px;
+    font-size: clamp(32px, 6vw, 64px); /* Адаптивный шрифт */
+}
+
+/* Компонент 5 */
+.meetings-event-photo {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    display: block;
+}
+
+/* Компонент 6 */
+.meetings-event-details {
+    margin-left: 10%;
+    margin-top: 10px;
+    font-size: clamp(16px, 3vw, 32px);  /* Адаптивный шрифт */
+}
+
+.meetings-details-space {
+    display: inline-block;
+    width: 40px;
+}
+
+/* Компонент 7 */
+.meetings-subtitle {
+    text-align: center;
+    margin-top: 100px;
+    font-size: clamp(32px, 6vw, 64px); /* Адаптивный шрифт */
+}
+
+/* Компонент 8 */
+.meetings-frequency {
+    text-align: center;
+    margin-top: 10px;
+    font-size: clamp(24px, 4.5vw, 48px); /* Адаптивный шрифт */
+}
+
+/* Компонент 9 */
+.meetings-cinema-description {
+    width: 80%;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+.meetings-cinema-description p {
+    font-size: clamp(16px, 3vw, 32px); /* Адаптивный шрифт */
+    line-height: 1.4;
+}
+
+/* Компонент 10 */
+.meetings-price-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: clamp(32px, 6vw, 64px); /* Адаптивный шрифт */
+}
+
+/* Компонент 11 */
+.meetings-price-block {
+    width: 60%;
+    margin: 50px auto 0;
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+}
+
+.meetings-price-offline {
+    font-size: clamp(16px, 3vw, 32px); /* Адаптивный шрифт */
+    margin: 0 0 20px 0;
+}
+
+/* Обновленные стили компонента 11 */
+.meetings-booking-text,
+.meetings-booking-contact {
+    font-size: clamp(16px, 3vw, 32px); /* Адаптивный шрифт */
+}
+
+.meetings-tg-icon {
+    width: 36px;
+    height: 36px;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+
+.meetings-booking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Медиазапросы */
+@media (max-width: 768px) {
+    .meetings-custom-rectangle {
+        height: 15vh;
+    }
+    .meetings-main-title {
+        margin-left: 15%; /* Уменьшаем отступ для мобильных */
+    }
+    
+    .meetings-group-photo {
+        width: 35%; /* Увеличиваем для лучшей видимости */
+        left: 72%;
+    }
+    
+    .meetings-event-title {
+        font-size: clamp(28px, 5.5vw, 56px); /* Кастомизация для мобильных */
+    }
+}

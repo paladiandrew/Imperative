@@ -1,0 +1,229 @@
+/* Общие стили */
+.communities-container {
+    color: white;
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Компонент 1 */
+.communities-hero {
+    position: relative;
+    height: 40vh;
+    width: 100%;
+}
+
+.communities-hero-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.communities-custom-rectangle {
+    width: 60%;
+    height: 25vh;
+    background-color: #111827;
+    border-radius: 0 2vh 2vh 0;
+    position: absolute;
+    left: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.communities-main-title {
+    margin-left: 20%;
+    font-size: clamp(32px, 6vw, 80px);
+    color: white;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.communities-group-photo {
+    width: 30%;
+    position: absolute;
+    left: 70%;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Компонент 2 */
+.communities-slogan {
+    width: 80%;
+    margin: 2vh auto;
+    text-align: center;
+}
+
+.communities-slogan h2 {
+    font-size: clamp(24px, 4vw, 48px);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Компонент 3 */
+.communities-description {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    gap: 10px;
+}
+
+.communities-description-image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.communities-description-text {
+    width: 50%;
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.communities-description-text p {
+    font-size: clamp(12px, 2vw, 32px);
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* Компонент 4 */
+.communities-subtitle {
+    font-size: clamp(32px, 6vw, 64px);
+    text-align: center;
+    margin: 10vh 0 5vh;
+}
+
+/* Компонент 5 */
+.communities-mission {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.communities-mission p {
+    font-size: clamp(16px, 2vw, 36px);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Компонент 6 */
+.communities-quality-block {
+    display: flex;
+    flex-direction: column;
+    margin: 5vh 0;
+}
+
+.communities-quality-top,
+.communities-quality-bottom {
+    font-size: clamp(24px, 6vw, 64px);
+    margin: 0 14%;
+    align-self: flex-start;
+}
+
+.communities-quality-center-image {
+    width: 60%;
+    margin: 2vh auto;
+}
+
+.communities-quality-bottom {
+    align-self: flex-end;
+    margin-right: 10%;
+}
+
+/* Компонент 7-8 */
+.communities-values-title {
+    font-size: clamp(32px, 6vw, 64px);
+    text-align: center;
+    margin: 5vh 0;
+}
+
+.communities-values {
+    width: 80%;
+    margin: 2vh auto;
+    background-color: #111827;
+    border-radius: 10px;
+    padding: 4vh;
+    text-align: center;
+}
+
+.communities-values h3 {
+    font-size: clamp(20px, 3vw, 36px);
+    margin: 3vh 0;
+}
+
+.communities-values p {
+    font-size: clamp(16px, 2vw, 32px);
+    margin: 0 0 5vh;
+    line-height: 1.4;
+}
+
+/* Планшетная версия (1024px и меньше) */
+@media (max-width: 1024px) {
+    .communities-custom-rectangle {
+        width: 60%; /* Было 60% */
+    }
+    .communities-description {
+        width: 94%;
+        margin: 0 auto;
+    }
+    
+    .communities-slogan,
+    .communities-mission{
+        width: 70%; /* Было 80% */
+    }
+    .communities-values {
+        width: 80%;
+        margin: 0 auto 2vh;
+    }
+    
+    .communities-quality-center-image {
+        width: 80%; /* Было 60% */
+    }
+    
+    .communities-group-photo {
+        width: 35%; /* Было 30% */
+    }
+}
+
+/* Мобильная версия (768px и меньше) */
+@media (max-width: 768px) {
+    .communities-custom-rectangle {
+        width: 60%; /* Каскадное увеличение */
+        height: 18vh;
+    }
+    
+    .communities-main-title {
+        margin-left: 10%;
+    }
+    .communities-description {
+        width: 98%;
+        margin: 0 auto;
+    }
+    
+    .communities-group-photo {
+        width: 40%;
+        left: 70%;
+        bottom: 20%;
+    }
+    
+    
+    .communities-quality-center-image {
+        width: 90%;
+    }
+    
+    .communities-quality-top,
+    .communities-quality-bottom {
+        margin: 0 5%;
+    }
+    .communities-description-image {
+        width: 50%;
+    }
+    
+    .communities-description-text {
+        width: 50%;
+    }
+}

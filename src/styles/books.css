@@ -1,0 +1,95 @@
+/* Общие стили */
+.books-container {
+    color: white;
+    font-family: sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    padding-bottom: 100px;
+}
+
+/* Компонент 1 */
+.books-hero {
+    display: flex;
+    align-items: center;
+    margin-top: clamp(30px, 5vw, 50px);
+}
+
+.books-title {
+    font-size: clamp(24px, 4vw, 80px);
+    width: 20%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+.books-description {
+    width: 65%;
+    background-color: #111827;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: clamp(20px, 4vw, 40px);
+    margin-right: 0;
+}
+
+.books-description p {
+    font-size: clamp(12px, 1.5vw, 32px);
+    line-height: 1.4;
+    margin: 0;
+    padding-right: 10%;
+}
+
+/* Компонент 2 */
+.books-program-title {
+    font-size: clamp(18px, 3vw, 64px);
+    text-align: center;
+    margin: clamp(30px, 10vw, 100px) 0;
+}
+
+/* Сетка книг */
+.books-grid {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #2C394D;
+    padding: clamp(25px, 5vw, 50px);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(15px, 4vw, 50px);
+}
+
+.book-card {
+    text-align: center;
+    padding: clamp(10px, 2vw, 20px);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Фиксируем высоту карточки */
+}
+
+.book-card h3 {
+    font-size: clamp(10px, 1.2vw, 24px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    min-height: 3.5em; /* Фиксированная высота для 2 строк */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+.book-card img {
+    width: 100%;
+    object-fit: cover;
+    flex-grow: 1; /* Занимает оставшееся пространство */
+}
+
+/* Медиазапросы ТОЛЬКО для экстремальных случаев */
+@media (max-width: 480px) {
+    .books-title {
+        font-size: clamp(20px, 6vw, 24px);
+    }
+    
+    .books-description p {
+        font-size: clamp(10px, 2.5vw, 12px);
+    }
+    
+    .book-card h3 {
+        font-size: clamp(8px, 2vw, 10px);
+    }
+}

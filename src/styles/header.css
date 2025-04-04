@@ -1,0 +1,111 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: clamp(8px, 1vw, 12px); /* Адаптивный padding */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #020617;
+    z-index: 1000;
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  .header-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .imperative {
+    font-size: clamp(18px, 1.25vw, 24px); /* 24px на 1920px */
+    text-decoration: none;
+    margin-left: 0;
+    color: white;
+    font-weight: bold;
+    white-space: nowrap; /* Запрещаем перенос текста */
+  }
+  
+  .nav-links {
+    display: flex;
+    margin-left: 5%;
+    width: 95%;
+  }
+  
+  .nav-link {
+    flex-grow: 1;
+    text-align: end;
+    font-size: clamp(14px, 1.04vw, 20px); /* 20px на 1920px */
+    text-decoration: none;
+    color: white;
+    padding: 0 clamp(4px, 0.5vw, 8px); /* Адаптивные отступы между ссылками */
+  }
+  
+  /* Планшетная версия (1024px и меньше) */
+  @media (max-width: 1024px) {
+    .header {
+      width: 80%;
+    }
+    
+    .imperative {
+      font-size: clamp(16px, 2vw, 20px);
+    }
+    
+    .nav-link {
+      font-size: clamp(12px, 1.5vw, 16px);
+    }
+  }
+  
+  /* Мобильная версия (768px и меньше) */
+  @media (max-width: 768px) {
+    .header {
+      width: 80%;
+      padding: 8px 4px;
+    }
+    
+    .nav-links {
+      margin-left: 3%;
+      width: 97%;
+    }
+    
+    .imperative {
+      font-size: clamp(14px, 3vw, 18px);
+    }
+    
+    .nav-link {
+      font-size: clamp(10px, 2vw, 14px);
+      padding: 0 3px;
+    }
+  }
+  
+  /* Очень маленькие экраны (480px и меньше) */
+  @media (max-width: 480px) {
+    .header {
+      width: 95%;
+      flex-direction: column;
+      padding: 6px 2px;
+    }
+    
+    .header-content {
+      flex-direction: column;
+    }
+    
+    .imperative {
+      margin-bottom: 6px;
+      font-size: clamp(12px, 4vw, 16px);
+    }
+    
+    .nav-links {
+      margin-left: 0;
+      width: 100%;
+      justify-content: space-around;
+    }
+    
+    .nav-link {
+      text-align: center;
+      font-size: clamp(10px, 3vw, 14px);
+      padding: 0 2px;
+    }
+  }
