@@ -406,7 +406,7 @@ html, body {
     .join-title,
     .join-steps,
     .cost-title {
-      font-size: calc(1.5vw + 12px) !important;  /* 8-12px */
+      font-size: calc(1vw + 13px) !important;  /* 8-12px */
     }
   }
 }
