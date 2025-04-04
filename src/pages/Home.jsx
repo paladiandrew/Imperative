@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import group1 from "../assets/images/group1.png";
 import image2 from "../assets/images/image2.png";
 import image3 from "../assets/images/image3.png";

@@ -1,6 +1,7 @@
 import React from 'react';
 import tgIcon from '../assets/images/tg.png';
 import instIcon from '../assets/images/inst.png';
+import { Link } from 'react-router-dom';
 import '../styles/footer.css'; // Обязательно подключите CSS файл
 
 const Footer = () => {
