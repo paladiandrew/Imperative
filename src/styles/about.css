@@ -328,6 +328,9 @@ html, body {
     .about-image-rectangle {
         height: 15vw;
     }
+    .divider-line {
+        height: 2px;
+      }
     
     
     .left-section, .right-section {
@@ -355,7 +358,9 @@ html, body {
   .profile-name {
     font-size: calc(1.3vw + 11px) !important;  /* 11-15px */
   }
-
+  .divider-line {
+    height: 2px;
+  }
   /* Основной текст */
   .left-text,
   .right-text,
@@ -371,7 +376,7 @@ html, body {
   /* Инструкции и цены */
   .instruction-text,
   .membership-item {
-    font-size: calc(0.7vw + 7px) !important;  /* 7-10px */
+    font-size: calc(1vw + 10px) !important;  /* 7-10px */
   }
 
   /* Микротекст */
@@ -401,7 +406,7 @@ html, body {
     .join-title,
     .join-steps,
     .cost-title {
-      font-size: calc(1vw + 11px) !important;  /* 8-12px */
+      font-size: calc(1vw + 12px) !important;  /* 8-12px */
     }
   }
 }

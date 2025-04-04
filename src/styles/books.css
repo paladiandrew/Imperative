@@ -52,12 +52,12 @@
     padding: clamp(25px, 5vw, 50px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(15px, 4vw, 50px);
+    gap: clamp(10px, 3vw, 25px);
 }
 
 .book-card {
     text-align: center;
-    padding: clamp(10px, 2vw, 20px);
+    padding: clamp(8px, 1.5vw, 16px);
     display: flex;
     flex-direction: column;
     height: 100%; /* Фиксируем высоту карточки */
@@ -75,8 +75,9 @@
 
 .book-card img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
     flex-grow: 1; /* Занимает оставшееся пространство */
+    flex-shrink: 0;
 }
 
 /* Медиазапросы ТОЛЬКО для экстремальных случаев */
@@ -90,6 +91,6 @@
     }
     
     .book-card h3 {
-        font-size: clamp(8px, 2vw, 10px);
+        font-size: clamp(4px, 1.7vw, 8px);
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import tgIcon from '../assets/images/tg.png';
 import instIcon from '../assets/images/inst.png';
-import { Link } from 'react-router-dom';
 import '../styles/footer.css'; // Обязательно подключите CSS файл
 
 const Footer = () => {
@@ -14,13 +14,13 @@ const Footer = () => {
 
             </div>
             <div className="footer-icons">
-            <a href="https://t.me/Men_Leadership" target="_blank" rel="noopener noreferrer">
+  <a href="https://t.me/kasatkin_books_club" target="_blank" rel="noopener noreferrer">
     <img src={tgIcon} alt="Telegram" className="footer-icon" />
-</a>
-<a href="https://www.instagram.com/menclub_books/profilecard/?igsh=bWN0YTJ2MGY5MHRx" target="_blank" rel="noopener noreferrer">
+  </a>
+  <a href="https://www.instagram.com/menclub_books/profilecard/?igsh=bWN0YTJ2MGY5MHRx" target="_blank" rel="noopener noreferrer">
     <img src={instIcon} alt="Instagram" className="footer-icon" />
-</a>
-            </div>
+  </a>
+</div>
         </footer>
     );
 }

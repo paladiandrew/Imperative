@@ -16,16 +16,16 @@ import '../styles/books.css';
 const booksData = [
   { id: 1, title: "Договориться можно обо всем", image: book1 },
   { id: 2, title: "Сиддхартха", image: book2 },
-  { id: 3, title: "Договориться можно обо всем", image: book3 },
-  { id: 4, title: "Сиддхартха", image: book4 },
-  { id: 5, title: "Договориться можно обо всем", image: book5 },
-  { id: 6, title: "Сиддхартха", image: book6 },
-  { id: 7, title: "Договориться можно обо всем", image: book7 },
-  { id: 8, title: "Сиддхартха", image: book8 },
-  { id: 9, title: "Договориться можно обо всем", image: book9 },
-  { id: 10, title: "Сиддхартха", image: book10 },
-  { id: 11, title: "Договориться можно обо всем", image: book11 },
-  { id: 12, title: "Сиддхартха", image: book12 },
+  { id: 3, title: "Продавец обуви", image: book3 },
+  { id: 4, title: "Ненасильственное общение", image: book4 },
+  { id: 5, title: "Атомные привычки", image: book5 },
+  { id: 6, title: "Крестный отец", image: book6 },
+  { id: 7, title: "Третья альтернатива", image: book7 },
+  { id: 8, title: "WILL", image: book8 },
+  { id: 9, title: "7 навыков высокоэффективных людей", image: book9 },
+  { id: 10, title: "Технология жизни.Книга для героев", image: book10 },
+  { id: 11, title: "Sapiens. Краткая история человечества", image: book11 },
+  { id: 12, title: "Поток. Психология переживания", image: book12 },
 ];
 
 const Books = () => {
