@@ -351,7 +351,7 @@ html, body {
   .join-title,
   .join-steps,
   .cost-title {
-    font-size: calc(1.2vw + 10px) !important;  /* 10-14px */
+    font-size: calc(1.2vw + 12px) !important;  /* 10-14px */
   }
 
   /* Заголовки профилей */
