@@ -124,3 +124,22 @@
         font-size: clamp(20px, 6vw, 22px); /* Еще меньше на совсем маленьких экранах */
     }
 }
+
+@media (max-width: 480px) {
+    .contacts-custom-rectangle {
+        height: 15vh;
+    }
+    .contacts-main-title {
+        font-size: clamp(18px, 5vw, 24px); /* Еще меньше на совсем маленьких экранах */
+    }
+    
+    .contacts-intro p {
+        font-size: clamp(12px, 2vw, 14px); /* Еще меньше на совсем маленьких экранах */
+    }
+    
+    .contacts-leader {
+        width: 90%;
+        margin: 10vh auto 3vh;
+        font-size: clamp(14px, 3vw, 16px); /* Еще меньше на совсем маленьких экранах */
+    }
+}

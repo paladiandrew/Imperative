@@ -340,3 +340,66 @@ html, body {
     
     
 }
+
+@media (max-width: 480px) {
+  /* Основные заголовки */
+  .about-title,
+  .club-message,
+  .join-title,
+  .join-steps,
+  .cost-title {
+    font-size: calc(1.2vw + 10px) !important;  /* 10-14px */
+  }
+
+  /* Заголовки профилей */
+  .profile-name {
+    font-size: calc(1.3vw + 11px) !important;  /* 11-15px */
+  }
+
+  /* Основной текст */
+  .left-text,
+  .right-text,
+  .centered-text2,
+  .text1,
+  .text2,
+  .profile-text,
+  .profile-description {
+    font-size: calc(0.8vw + 6px) !important;  /* 8-11px */
+    line-height: 1.2;
+  }
+
+  /* Инструкции и цены */
+  .instruction-text,
+  .membership-item {
+    font-size: calc(0.7vw + 7px) !important;  /* 7-10px */
+  }
+
+  /* Микротекст */
+  .instruction-box,
+  .membership-prices {
+    font-size: calc(0.6vw + px) !important;  /* 6-9px */
+  }
+
+  /* Дополнительное масштабирование для очень маленьких экранов */
+  @media (max-width: 360px) {
+    .about-title,
+    .club-message,
+    .join-title,
+    .join-steps,
+    .cost-title {
+      font-size: calc(1vw + 8px) !important;  /* 8-12px */
+    }
+    
+    .profile-name {
+      font-size: calc(1.1vw + 9px) !important;  /* 9-13px */
+    }
+    
+    .left-text,
+    .right-text,
+    .centered-text2,
+    .text1,
+    .text2 {
+      font-size: calc(0.7vw + 6px) !important;  /* 6-9px */
+    }
+  }
+}

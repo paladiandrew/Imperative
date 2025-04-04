@@ -10,7 +10,7 @@
 /* Компонент 1 - Герой */
 .meetings-hero {
     position: relative;
-    height: 35vh;
+    height: 30vh;
     width: 100%;
 }
 
@@ -47,7 +47,7 @@
 /* Компонент 2 */
 .meetings-slogan {
     width: 75%;
-    margin: 50px auto;
+    margin: 5vh auto;
     text-align: center;
 }
 
@@ -79,7 +79,7 @@
 
 /* Компонент 5 */
 .meetings-event-photo {
-    width: 80%;
+    width: 70%;
     margin-left: 10%;
     margin-top: 50px;
     display: block;
@@ -100,7 +100,7 @@
 /* Компонент 7 */
 .meetings-subtitle {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 5vh;
     font-size: clamp(32px, 6vw, 64px); /* Адаптивный шрифт */
 }
 
@@ -126,14 +126,14 @@
 /* Компонент 10 */
 .meetings-price-title {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 5vh;
     font-size: clamp(32px, 6vw, 64px); /* Адаптивный шрифт */
 }
 
 /* Компонент 11 */
 .meetings-price-block {
     width: 60%;
-    margin: 50px auto 0;
+    margin: 5vh auto 0;
     background-color: #111827;
     border-radius: 10px;
     padding: 30px;
@@ -167,6 +167,11 @@
 
 /* Медиазапросы */
 @media (max-width: 768px) {
+    .meetings-event-photo {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
     .meetings-custom-rectangle {
         height: 15vh;
     }
@@ -182,4 +187,25 @@
     .meetings-event-title {
         font-size: clamp(28px, 5.5vw, 56px); /* Кастомизация для мобильных */
     }
+}
+@media (max-width: 480px) {
+.meetings-main-title {
+    font-size: clamp(20px, 5vw, 24px) !important;
+  }
+  .meetings-slogan p {
+    font-size: clamp(14px, 4vw, 16px) !important;
+  }
+  .meetings-description p,
+  .meetings-event-details,
+  .meetings-booking-text {
+    font-size: clamp(12px, 3vw, 14px) !important;
+  }
+  .meetings-event-title,
+  .meetings-subtitle,
+  .meetings-price-title {
+    font-size: clamp(18px, 5vw, 22px) !important;
+  }
+  .meetings-frequency {
+    font-size: clamp(18px, 5vw, 22px); /* Адаптивный шрифт */
+}
 }

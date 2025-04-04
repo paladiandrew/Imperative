@@ -59,15 +59,15 @@
 .communities-slogan h2 {
     font-size: clamp(24px, 4vw, 48px);
     margin: 0;
-    line-height: 1.2;
+    line-height: 1;
 }
 
 /* Компонент 3 */
 .communities-description {
     width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .communities-description-image {
@@ -193,17 +193,23 @@
 
 /* Мобильная версия (768px и меньше) */
 @media (max-width: 768px) {
+    .communities-hero {
+        height: 30vh;
+    }
     .communities-custom-rectangle {
         width: 60%; /* Каскадное увеличение */
-        height: 18vh;
+        height: 15vh;
     }
     
     .communities-main-title {
-        margin-left: 10%;
+        margin-left: 20%;
     }
     .communities-description {
         width: 98%;
         margin: 0 auto;
+    }
+    .communities-description-text {
+        padding: 5px;
     }
     
     .communities-group-photo {
@@ -212,8 +218,7 @@
         bottom: 20%;
     }
     
-    
-    .communities-quality-center-image {
+    .communities-slogan{
         width: 90%;
     }
     
@@ -228,23 +233,41 @@
     .communities-description-text {
         width: 50%;
     }
+
 }
 
 @media (max-width: 480px) {
 .communities-main-title {
-    font-size: clamp(18px, 5vw, 24px) !important;
+    font-size: clamp(16px, 4vw, 22px);
   }
   .communities-slogan h2 {
-    font-size: clamp(16px, 4vw, 20px) !important;
+    width: 96%;
+    font-size: clamp(10px, 2vw, 16px);
   }
   .communities-description-text p {
-    font-size: clamp(10px, 3vw, 12px) !important;
+    margin: 5px 0;
+    font-size: clamp(5px, 2vw, 7px);
   }
   .communities-subtitle,
   .communities-values-title {
-    font-size: clamp(20px, 5vw, 24px) !important;
+    font-size: clamp(16px, 4vw, 22px);
   }
   .communities-mission p {
-    font-size: clamp(12px, 3.5vw, 14px) !important;
+    font-size: clamp(10px, 3vw, 12px);
   }
+  .communities-quality-top,
+  .communities-quality-bottom {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+  .communities-values h3 {
+    font-size: clamp(12px, 3vw, 16px);
+}
+
+.communities-values p {
+    font-size: clamp(12px, 2vw, 32px);
+}
+.communities-values-title {
+    font-size: clamp(14px, 4vw, 16px);
+    margin-top: 7vh;
+}
 }

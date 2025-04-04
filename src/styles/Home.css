@@ -202,7 +202,7 @@
 }
 
 .home__spacer {
-    margin-top: 10vh;
+    margin-top: 150px;
 }
 
 /* Планшетная версия */
@@ -297,3 +297,31 @@
         margin: 30px auto 20px;
     }
 }  
+
+@media (max-width: 480px) {
+    
+    .home__contact-btn {
+        font-size: clamp(10px, 3vw, 12px);
+    }
+
+    .home__main-title {
+        font-size: clamp(14px, 4vw, 16px) !important;
+      }
+      .home__main-descr {
+        font-size: clamp(6px, 2vw, 8px) !important;
+      }
+      .home__club-title,
+      .home__info-title {
+        font-size: clamp(14px, 3vw, 18px) !important;
+      }
+      .home__club-descr,
+      .home__info-descr {
+        font-size: clamp(8px, 2vw, 10px) !important;
+      }
+      .home__gradient-title {
+        font-size: clamp(12px, 4vw, 18px) !important;
+      }
+      .home__gradient-descr {
+        font-size: clamp(10px, 3vw, 12px) !important;
+      }
+}
