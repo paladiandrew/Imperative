@@ -55,7 +55,7 @@ const Meetings = () => {
 
       {/* Компонент 11 - обновленная версия */}
 <div className="meetings-price-block">
-  <p className="meetings-price-offline">Offline-группа: 5 000</p>
+  <p className="meetings-price-offline">Стоимость участия: 5 000</p>
   <div className="meetings-booking">
     <span className="meetings-booking-text">Бронирование:</span>
     <img src={tgIcon} alt="Telegram" className="meetings-tg-icon" />
