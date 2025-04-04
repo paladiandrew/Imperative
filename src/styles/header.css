@@ -83,29 +83,21 @@
   /* Очень маленькие экраны (480px и меньше) */
   @media (max-width: 480px) {
     .header {
-      width: 95%;
-      flex-direction: column;
-      padding: 6px 2px;
+      width: 90%;
+      justify-content: center;
     }
-    
-    .header-content {
-      flex-direction: column;
-    }
-    
+
     .imperative {
-      margin-bottom: 6px;
-      font-size: clamp(12px, 4vw, 16px);
+      font-size: clamp(10px, 4vw, 12px) !important;
     }
     
     .nav-links {
       margin-left: 0;
       width: 100%;
-      justify-content: space-around;
     }
     
     .nav-link {
-      text-align: center;
-      font-size: clamp(10px, 3vw, 14px);
+      font-size: clamp(8px, 3vw, 10px);
       padding: 0 2px;
     }
   }

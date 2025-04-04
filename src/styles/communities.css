@@ -120,6 +120,7 @@
 .communities-quality-top,
 .communities-quality-bottom {
     font-size: clamp(24px, 6vw, 64px);
+    line-height: 0px;
     margin: 0 14%;
     align-self: flex-start;
 }
@@ -131,6 +132,7 @@
 
 .communities-quality-bottom {
     align-self: flex-end;
+    line-height: 0px;
     margin-right: 10%;
 }
 
@@ -226,4 +228,23 @@
     .communities-description-text {
         width: 50%;
     }
+}
+
+@media (max-width: 480px) {
+.communities-main-title {
+    font-size: clamp(18px, 5vw, 24px) !important;
+  }
+  .communities-slogan h2 {
+    font-size: clamp(16px, 4vw, 20px) !important;
+  }
+  .communities-description-text p {
+    font-size: clamp(10px, 3vw, 12px) !important;
+  }
+  .communities-subtitle,
+  .communities-values-title {
+    font-size: clamp(20px, 5vw, 24px) !important;
+  }
+  .communities-mission p {
+    font-size: clamp(12px, 3.5vw, 14px) !important;
+  }
 }

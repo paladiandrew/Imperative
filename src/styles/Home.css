@@ -202,7 +202,7 @@
 }
 
 .home__spacer {
-    margin-top: 300px;
+    margin-top: 10vh;
 }
 
 /* Планшетная версия */
@@ -235,37 +235,37 @@
 }
 
 /* Мобильная версия */
-@media (max-width: 480px) {
-    .home__main-title {
-        font-size: clamp(24px, 5vw, 28px);
-    }
-    
-    .home__main-descr {
-        font-size: clamp(12px, 3.5vw, 14px);
-    }
-    
-    .home__club-title,
-    .home__info-title {
-        font-size: clamp(18px, 4vw, 22px);
-    }
-    
-    .home__club-descr,
-    .home__info-descr {
-        font-size: clamp(12px, 3.2vw, 14px);
-    }
-    
-    .home__gradient-title {
-        font-size: clamp(20px, 4.5vw, 24px);
-    }
-    
-    .home__gradient-descr {
-        font-size: clamp(14px, 3.8vw, 18px);
+@media (max-width: 670px) {
+    .home__info-section {
+        width: 90%;
+        margin: 0 auto;
     }
     
     .home__contact-btn {
         font-size: clamp(14px, 3.5vw, 16px);
         padding: 1.2vh 5vw;
     }
+
+    .home__main-title {
+        font-size: clamp(18px, 5vw, 20px) !important;
+      }
+      .home__main-descr {
+        font-size: clamp(8px, 3vw, 10px) !important;
+      }
+      .home__club-title,
+      .home__info-title {
+        font-size: clamp(16px, 4vw, 18px) !important;
+      }
+      .home__club-descr,
+      .home__info-descr {
+        font-size: clamp(10px, 3vw, 12px) !important;
+      }
+      .home__gradient-title {
+        font-size: clamp(12px, 4vw, 18px) !important;
+      }
+      .home__gradient-descr {
+        font-size: clamp(10px, 3vw, 12px) !important;
+      }
 }
 
 /* 4K версия */
@@ -292,3 +292,8 @@
         margin-top: 400px;
     }
 }
+@media (max-width: 768px) {
+    .home__gradient-box {
+        margin: 30px auto 20px;
+    }
+}  
