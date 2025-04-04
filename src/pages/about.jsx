@@ -109,7 +109,7 @@ const About = () => {
                 </div>
                 <div className="membership-item">
                     <p>За полгода</p>
-                    <p>Online-группа: 60 000</p>
+                    <p>Online-группа: 48 000</p>
                     <p>Offline-группа: 80 000</p>
                 </div>
             </div>

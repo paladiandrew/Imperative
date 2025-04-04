@@ -58,7 +58,7 @@
 
 /* Компонент 3 */
 .meetings-description {
-    width: 30%;
+    width: 50%;
     margin-left: 10%;
     margin-top: 50px;
 }
@@ -189,6 +189,9 @@
     }
 }
 @media (max-width: 480px) {
+    .meetings-description {
+        margin-left: 2%;
+    }
 .meetings-main-title {
     font-size: clamp(20px, 5vw, 24px) !important;
   }

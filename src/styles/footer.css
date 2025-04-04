@@ -110,9 +110,9 @@
     }
     /* Адаптируем ваши идеальные значения под мобилки */
     .footer-icon:first-child {
-        left: calc(25% - 17px);
+        left: calc(30% - 17px);
     }
     .footer-icon:last-child {
-        left: calc(79% - 17px);
+        left: calc(70% - 17px);
     }
 }
