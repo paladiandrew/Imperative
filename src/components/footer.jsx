@@ -7,13 +7,18 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-links">
-                <a href="#community" className="footer-link">Сообщество</a>
-                <a href="#about" className="footer-link">О клубе</a>
-                <a href="#contacts" className="footer-link">Контакты</a>
+                <Link to="/communities" className="footer-link">Сообщества</Link>
+                <Link to="/about" className="footer-link">О клубе</Link>
+                <Link to="/contacts" className="footer-link">Контакты</Link>
+
             </div>
             <div className="footer-icons">
-                <img src={tgIcon} alt="Telegram" className="footer-icon" />
-                <img src={instIcon} alt="Instagram" className="footer-icon" />
+            <a href="https://t.me/Men_Leadership" target="_blank" rel="noopener noreferrer">
+    <img src={tgIcon} alt="Telegram" className="footer-icon" />
+</a>
+<a href="https://www.instagram.com/menclub_books/profilecard/?igsh=bWN0YTJ2MGY5MHRx" target="_blank" rel="noopener noreferrer">
+    <img src={instIcon} alt="Instagram" className="footer-icon" />
+</a>
             </div>
         </footer>
     );

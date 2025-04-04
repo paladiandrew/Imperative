@@ -383,10 +383,7 @@ html, body {
   /* Дополнительное масштабирование для очень маленьких экранов */
   @media (max-width: 360px) {
     .about-title,
-    .club-message,
-    .join-title,
-    .join-steps,
-    .cost-title {
+    .club-message {
       font-size: calc(1vw + 8px) !important;  /* 8-12px */
     }
     
@@ -400,6 +397,11 @@ html, body {
     .text1,
     .text2 {
       font-size: calc(0.7vw + 6px) !important;  /* 6-9px */
+    }
+    .join-title,
+    .join-steps,
+    .cost-title {
+      font-size: calc(1vw + 11px) !important;  /* 8-12px */
     }
   }
 }

@@ -15,7 +15,7 @@
     width: 100%;
     max-width: 800px;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-top: 20px;
 }
 
@@ -110,9 +110,9 @@
     }
     /* Адаптируем ваши идеальные значения под мобилки */
     .footer-icon:first-child {
-        left: calc(30% - 17px);
+        left: calc(35% - 17px);
     }
     .footer-icon:last-child {
-        left: calc(70% - 17px);
+        left: calc(65% - 17px);
     }
 }

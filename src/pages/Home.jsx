@@ -84,7 +84,9 @@ const Home = () => {
             <div className="home__gradient-box">
               <h3 className="home__gradient-title">Присоединяйтесь к нашему клубу.</h3>
               <p className="home__gradient-descr">Императив - это уникальное место для обсуждения и анализа книг</p>
-              <button className="home__contact-btn">Контакты</button>
+                <Link to="/contacts" className="home__contact-btn">
+                    Контакты
+                </Link>
             </div>
           </div>
         </div>

@@ -23,15 +23,19 @@ const Contacts = () => {
       </div>
 
       {/* Компонент 3 */}
-      <h2 className="contacts-leader">Главный ведущий клуба — Касаткин Михаил</h2>
+      <h2 className="contacts-leader">Основатель и ведущий клуба — Касаткин Михаил</h2>
 
       {/* Компонент 4 */}
       <div className="contacts-card">
         <img src={contact1} alt="Contact 1" className="contacts-main-photo" />
         <div className="contacts-socials">
-          <img src={tgIcon} alt="Telegram" className="contacts-social-icon" />
-          <img src={instIcon} alt="Instagram" className="contacts-social-icon" />
-        </div>
+    <a href="https://t.me/Men_Leadership" target="_blank" rel="noopener noreferrer">
+        <img src={tgIcon} alt="Telegram" className="contacts-social-icon" />
+    </a>
+    <a href="https://www.instagram.com/kasatkin_motivator?igsh=dWF2cWcyYnhjZm4y" target="_blank" rel="noopener noreferrer">
+        <img src={instIcon} alt="Instagram" className="contacts-social-icon" />
+    </a>
+</div>
       </div>
 
       {/* Компонент 5 */}
@@ -41,9 +45,13 @@ const Contacts = () => {
       <div className="contacts-card">
         <img src={contact2} alt="Contact 2" className="contacts-main-photo" />
         <div className="contacts-socials">
-          <img src={tgIcon} alt="Telegram" className="contacts-social-icon" />
-          <img src={instIcon} alt="Instagram" className="contacts-social-icon" />
-        </div>
+    <a href="https://t.me/artemgibdog" target="_blank" rel="noopener noreferrer">
+        <img src={tgIcon} alt="Telegram" className="contacts-social-icon" />
+    </a>
+    <a href="https://www.instagram.com/menclub_books/profilecard/?igsh=bWN0YTJ2MGY5MHRx" target="_blank" rel="noopener noreferrer">
+        <img src={instIcon} alt="Instagram" className="contacts-social-icon" />
+    </a>
+</div>
       </div>
     </div>
   );
